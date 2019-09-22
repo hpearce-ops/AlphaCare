@@ -10,5 +10,5 @@ package Medical;
  * @author henrypearce
  */
 public class Login {
-    
+    private String password; 
 }
