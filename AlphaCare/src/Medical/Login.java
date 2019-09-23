@@ -10,50 +10,35 @@ package Medical;
  * @author henrypearce
  */
 public class Login {
-    private String personnelID;
-    private String passWord; 
+    private MedicalPersonnel medicalPersonnel;
 
     /**
      *
-     * @param personnelID
-     * @param passWord
+     * @param medicalPersonnel
      */
-    public Login(String personnelID, String passWord) {
-        this.personnelID = personnelID;
-        this.passWord = passWord;
-    }
-
-    /**
+    public Login(MedicalPersonnel medicalPersonnel) {
+        this.medicalPersonnel = medicalPersonnel;
+    } 
+    
+        /**
      *
      * @return
      */
-    public String getPersonnelID() {
-        return personnelID;
-    }
 
     /**
      *
-     * @param personnelID
+     * @param patient
      */
-    public void setPersonnelID(String personnelID) {
-        this.personnelID = personnelID;
-    }
-
-    /**
-     *
-     * @return
-     */
-    public String getPassWord() {
-        return passWord;
-    }
-
-    /**
-     *
-     * @param passWord
-     */
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public void setMedicalPersonnel(MedicalPersonnel medicalPersonnel) {
+        this.medicalPersonnel = medicalPersonnel;
     }
     
-    
+    /**
+     * Checks to see if the user input is valid. 
+     * @param patient
+     * @return Will return false if check fails and true if check succeeds. 
+     */
+    public Boolean authenticateUser(MedicalPersonnel medicalPersonnel){
+        return true || false; 
+    }
 }

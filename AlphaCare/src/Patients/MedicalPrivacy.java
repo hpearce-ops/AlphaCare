@@ -51,7 +51,7 @@ public class MedicalPrivacy {
     }
     
     /**
-     * Takes a custom array as it's parameter. Allows user to define which 
+     * Takes a custom boolean array as it's parameter. Allows user to define which 
      * medical personnel have access to medical information. 
      * @param array
      * @return

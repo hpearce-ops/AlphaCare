@@ -15,7 +15,7 @@ public class Login {
     private String passWord;
 
     /**
-     *
+     * this is the constructor for Admin users 
      * @param adminID
      * @param passWord
      */
@@ -26,14 +26,14 @@ public class Login {
 
     /**
      *
-     * @return
+     * @return the admin id as a string object
      */
     public String getAdminID() {
         return adminID;
     }
 
     /**
-     *
+     * takes a string as a parameter in order to set the admin id for the admin instance
      * @param adminID
      */
     public void setAdminID(String adminID) {
@@ -42,15 +42,15 @@ public class Login {
 
     /**
      *
-     * @return
+     * @return the admin's password as a string object
      */
     public String getPassWord() {
         return passWord;
     }
 
     /**
-     *
-     * @param passWord
+     * takes a string as a parameter in order to set the admin's password for the admin instance
+     * @param passWord 
      */
     public void setPassWord(String passWord) {
         this.passWord = passWord;

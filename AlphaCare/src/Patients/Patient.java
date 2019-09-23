@@ -14,7 +14,7 @@ public class Patient {
     private String passWord;
 
     /**
-     * This is the default constructor for login. 
+     * This is the default constructor for Patient. 
      * @param patientID
      * @param passWord
      */
