@@ -11,4 +11,28 @@ package Admin;
  */
 public class Login {
 
+    private String adminID;
+    private String passWord;
+
+    public Login(String adminID, String passWord) {
+        this.adminID = adminID;
+        this.passWord = passWord;
+    }
+
+    public String getAdminID() {
+        return adminID;
+    }
+
+    public void setAdminID(String adminID) {
+        this.adminID = adminID;
+    }
+
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
 }

@@ -3,27 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Medical;
+package Patients;
 
 /**
  *
- * @author henrypearce
+ * @author david
  */
-public class Login {
-    private String personnelID;
-    private String passWord; 
+public class Patient {
+    private String patientID;
+    private String passWord;
 
-    public Login(String personnelID, String passWord) {
-        this.personnelID = personnelID;
+    public Patient(String patientID, String passWord) {
+        this.patientID = patientID;
         this.passWord = passWord;
     }
 
-    public String getPersonnelID() {
-        return personnelID;
+    public String getPatientID() {
+        return patientID;
     }
 
-    public void setPersonnelID(String personnelID) {
-        this.personnelID = personnelID;
+    public void setPatientID(String patientID) {
+        this.patientID = patientID;
     }
 
     public String getPassWord() {
