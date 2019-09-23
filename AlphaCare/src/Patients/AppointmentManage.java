@@ -5,19 +5,21 @@
  */
 package Patients;
 
+import Admin.Appointment;
+
 /**
  *
  * @author henrypearce
  */
 public class AppointmentManage {
-    private appointment appt; 
+    private Appointment appt; 
     //appointment class found in the Admin API
 
     /**
      * Default constructor for class. 
      * @param appt
      */
-    public AppointmentManage(appointment appt) {
+    public AppointmentManage(Appointment appt) {
         this.appt = appt;
     }
     
