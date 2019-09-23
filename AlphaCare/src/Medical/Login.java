@@ -19,23 +19,26 @@ public class Login {
     public Login(MedicalPersonnel medicalPersonnel) {
         this.medicalPersonnel = medicalPersonnel;
     } 
-    
-        /**
-     *
-     * @return
-     */
 
     /**
      *
-     * @param patient
+     * @param medicalPersonnel
      */
     public void setMedicalPersonnel(MedicalPersonnel medicalPersonnel) {
         this.medicalPersonnel = medicalPersonnel;
     }
     
     /**
+     *
+     * @return a MedicalPersonnel object
+     */
+    public MedicalPersonnel getMedicalPersonnel(){
+        return this.medicalPersonnel;
+    }
+    
+    /**
      * Checks to see if the user input is valid. 
-     * @param patient
+     * @param medicalPersonnel
      * @return Will return false if check fails and true if check succeeds. 
      */
     public Boolean authenticateUser(MedicalPersonnel medicalPersonnel){

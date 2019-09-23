@@ -11,49 +11,39 @@ package Admin;
  */
 public class Login {
 
-    private String adminID;
-    private String passWord;
+    private Admin admin;
 
     /**
-     * this is the constructor for Admin users 
-     * @param adminID
-     * @param passWord
+     * constructor for Login class
+     * @param admin
      */
-    public Login(String adminID, String passWord) {
-        this.adminID = adminID;
-        this.passWord = passWord;
+    public Login(Admin admin) {
+        this.admin = admin;
     }
 
     /**
-     *
-     * @return the admin id as a string object
+     * 
+     * @return returns an Admin object for the Login class instance
      */
-    public String getAdminID() {
-        return adminID;
+    public Admin getAdmin() {
+        return admin;
     }
 
     /**
-     * takes a string as a parameter in order to set the admin id for the admin instance
-     * @param adminID
+     * sets the Admin object for the Login class instance
+     * @param admin
      */
-    public void setAdminID(String adminID) {
-        this.adminID = adminID;
+    public void setAdmin(Admin admin) {
+        this.admin = admin;
     }
-
-    /**
-     *
-     * @return the admin's password as a string object
+    
+        /**
+     * Checks to see if the user input is valid. 
+     * @param admin
+     * @return Will return false if check fails and true if check succeeds. 
      */
-    public String getPassWord() {
-        return passWord;
-    }
-
-    /**
-     * takes a string as a parameter in order to set the admin's password for the admin instance
-     * @param passWord 
-     */
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
+    public Boolean authenticateUser(Admin admin){
+        return true || false; 
     }
 
 }

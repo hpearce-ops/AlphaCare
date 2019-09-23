@@ -31,14 +31,14 @@ public class MedicalRecord {
 
     /**
      *
-     * @return
+     * @return a string object representing a patient's id
      */
     public String getPatientID() {
         return patientID;
     }
 
     /**
-     *
+     * sets the patient's id for the class instance of MedicalRecord
      * @param patientID
      */
     public void setPatientID(String patientID) {
@@ -47,14 +47,14 @@ public class MedicalRecord {
 
     /**
      *
-     * @return
+     * @return string object representing the patient's name
      */
     public String getName() {
         return name;
     }
 
     /**
-     *
+     * sets the patient's name for the class instance of MedicalRecord
      * @param name
      */
     public void setName(String name) {
@@ -63,14 +63,14 @@ public class MedicalRecord {
 
     /**
      *
-     * @return
+     * @return a file object that represents a patient's medical records
      */
     public File getMedicalRecords() {
         return MedicalRecords;
     }
 
     /**
-     *
+     * sets the file object for a patient for the MedicalRecords class instance 
      * @param MedicalRecords
      */
     public void setMedicalRecords(File MedicalRecords) {
