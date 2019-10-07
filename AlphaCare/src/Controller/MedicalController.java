@@ -6,7 +6,8 @@
 package Controller;
 
 
-import Model.Medical;
+import Model.Medical.Login;
+import Model.Medical.MedicalPersonnel;
 import View.MedicalView;
 
 /**
@@ -15,17 +16,17 @@ import View.MedicalView;
  */
 public class MedicalController {
 
-    private MedicalController(){
+    public MedicalController(){
         MedicalView view = new MedicalView();
-        view.createdUI;
+        view.createdUI();
         
         MedicalPersonnel personnel = new MedicalPersonnel("ABC123","PASSWORD");
         Login login = new Login(personnel);
         login.setMedicalPersonnel(personnel);
         if(login.authenticateUser(personnel)){
-            System.out.println("login successfull);
+            System.out.println("Login successfull");
         }else{
-            System.out.println("login fail);
+            System.out.println("login fail");
         }                       
     }
 }
