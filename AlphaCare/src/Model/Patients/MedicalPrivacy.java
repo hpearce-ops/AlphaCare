@@ -40,14 +40,18 @@ public class MedicalPrivacy {
      * Denies all medical personnel access to medical information. 
      */
     public void denyAllPersonnel() {
-
+        for (int i = 0; i < medicalPersonnel.length; i++) {
+            medicalPersonnel[i] = false; 
+        }
     }
     
     /**
      * Allows all medical personnel access to medical information. 
      */
     public void allowAllPersonnel() {
-      
+        for (int i = 0; i < medicalPersonnel.length; i++) {
+            medicalPersonnel[i] = true; 
+        }
     }
     
     /**
@@ -57,6 +61,11 @@ public class MedicalPrivacy {
      * @return
      */
     public Boolean[] togglePersonnel(Boolean array[]) {
+        for (int i = 0; i < medicalPersonnel.length; i++) {
+            medicalPersonnel[1] = true; 
+            medicalPersonnel[1] = false;
+            medicalPersonnel[1] = true;
+        }
         return array; 
     }
 

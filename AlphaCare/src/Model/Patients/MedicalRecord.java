@@ -21,12 +21,10 @@ public class MedicalRecord {
      * Default constructor for medical record. 
      * @param patientID
      * @param name
-     * @param MedicalRecords
      */
-    public MedicalRecord(String patientID, String name, File MedicalRecords) {
+    public MedicalRecord(String patientID, String name) {
         this.patientID = patientID;
         this.name = name;
-        this.MedicalRecords = MedicalRecords;
     }
 
     /**

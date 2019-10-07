@@ -5,6 +5,8 @@
  */
 package Main;
 
+
+import Controller.PatientController; 
 /**
  *
  * @author henrypearce
@@ -17,6 +19,8 @@ public class AlphaCare {
         int selection = 0; 
         //listeners will determine which button user presses. 
         selectUserAPI(selection); 
+        
+        PatientController patient = new PatientController();  
     }
     
     /**

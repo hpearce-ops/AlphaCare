@@ -42,7 +42,7 @@ public class AccountPrivacy {
      * @return
      */
     public Boolean verifyID(String accountID){
-        return true || false; 
+        return accountID.equals(getAccountID());
     }
     
     /**
@@ -50,7 +50,11 @@ public class AccountPrivacy {
      * @param accountID
      */
     public void removedAddition(String accountID){
-        
+        if(accountID.equals(getAccountID())) {
+            setAccountID(""); 
+        } else {
+            System.out.println("Failed to remove accountID " + accountID);
+        }
     }
 
     /**
@@ -58,7 +62,11 @@ public class AccountPrivacy {
      * @param accountID
      */
     public void approveAddition(String accountID){
-        
+        if (verifyID(accountID) == true){
+            setAccountID(accountID);
+        } else {
+            System.out.println("Failed to add accountID " + accountID);
+        }
     }
 }
 

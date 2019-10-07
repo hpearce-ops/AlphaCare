@@ -44,7 +44,7 @@ public class Login {
      * @return Will return false if check fails and true if check succeeds. 
      */
     public Boolean authenticateUser(Patient patient){
-        return true || false; 
+        return patient.equals(getPatient()); 
     }
     
 
