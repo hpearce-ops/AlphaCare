@@ -9,7 +9,12 @@ package Controller;
 import Model.Medical.Login;
 import Model.Medical.MedicalPersonnel;
 import View.MedicalView;
+import Model.Patients.Patient;
 
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
 /**
  *
  * @author david
@@ -23,11 +28,18 @@ public class MedicalController {
         MedicalPersonnel personnel = new MedicalPersonnel("ABC123","PASSWORD");
         Login login = new Login(personnel);
         login.setMedicalPersonnel(personnel);
+        
         if(login.authenticateUser(personnel)){
             System.out.println("Login successfull");
         }else{
+<<<<<<< HEAD
             System.out.println("login fail");
         }                       
+=======
+            System.out.println("login fail);
+        } 
+                    
+>>>>>>> 97d61b30be6cad6da1fb1b288218edd470725af4
     }
 }
 
