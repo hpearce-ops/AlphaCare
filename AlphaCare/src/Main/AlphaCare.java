@@ -6,7 +6,8 @@
 package Main;
 
 
-import Controller.PatientController; 
+import Controller.*; 
+
 /**
  *
  * @author henrypearce
@@ -15,12 +16,10 @@ public class AlphaCare {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        int selection = 0; 
-        //listeners will determine which button user presses. 
-        selectUserAPI(selection); 
-        
-        PatientController patient = new PatientController();  
+    public static void main(String[] args) {  
+        selectUserAPI(1);       
+        selectUserAPI(2);
+        selectUserAPI(3); 
     }
     
     /**
@@ -31,7 +30,15 @@ public class AlphaCare {
      * @param selection
      */
     public static void selectUserAPI(int selection) {
-        String API = "";  
+        if (selection == 1) {
+            AdminController admin = new AdminController();  
+        }
+        else if (selection == 2) {
+            MedicalController medical = new MedicalController(); 
+        }
+        else if (selection == 3) {
+            PatientController patient = new PatientController();
+        }
         //if statements and other login method calls (methods can be found in respective packages). 
     }
     
