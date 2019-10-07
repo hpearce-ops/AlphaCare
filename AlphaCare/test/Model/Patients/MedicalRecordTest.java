@@ -44,12 +44,10 @@ public class MedicalRecordTest {
     @Test
     public void testGetPatientID() {
         System.out.println("getPatientID");
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         String expResult = "";
         String result = instance.getPatientID();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -59,10 +57,8 @@ public class MedicalRecordTest {
     public void testSetPatientID() {
         System.out.println("setPatientID");
         String patientID = "";
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         instance.setPatientID(patientID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,12 +67,10 @@ public class MedicalRecordTest {
     @Test
     public void testGetName() {
         System.out.println("getName");
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         String expResult = "";
         String result = instance.getName();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,10 +80,8 @@ public class MedicalRecordTest {
     public void testSetName() {
         System.out.println("setName");
         String name = "";
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         instance.setName(name);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -98,12 +90,10 @@ public class MedicalRecordTest {
     @Test
     public void testGetMedicalRecords() {
         System.out.println("getMedicalRecords");
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         File expResult = null;
         File result = instance.getMedicalRecords();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -113,10 +103,8 @@ public class MedicalRecordTest {
     public void testSetMedicalRecords() {
         System.out.println("setMedicalRecords");
         File MedicalRecords = null;
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         instance.setMedicalRecords(MedicalRecords);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -126,10 +114,8 @@ public class MedicalRecordTest {
     public void testUploadMedicalRecord() {
         System.out.println("uploadMedicalRecord");
         File file = null;
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         instance.uploadMedicalRecord(file);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -138,10 +124,8 @@ public class MedicalRecordTest {
     @Test
     public void testDeleteMedicalRecord() {
         System.out.println("deleteMedicalRecord");
-        MedicalRecord instance = null;
+        MedicalRecord instance = new MedicalRecord("","");
         instance.deleteMedicalRecord();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

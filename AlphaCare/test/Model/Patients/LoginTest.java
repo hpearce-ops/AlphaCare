@@ -17,22 +17,22 @@ import static org.junit.Assert.*;
  * @author david
  */
 public class LoginTest {
-    
+
     public LoginTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -43,12 +43,10 @@ public class LoginTest {
     @Test
     public void testGetPatient() {
         System.out.println("getPatient");
-        Login instance = null;
+        Login instance = new Login(null);
         Patient expResult = null;
         Patient result = instance.getPatient();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +56,8 @@ public class LoginTest {
     public void testSetPatient() {
         System.out.println("setPatient");
         Patient patient = null;
-        Login instance = null;
+        Login instance = new Login(null);
         instance.setPatient(patient);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,13 +66,11 @@ public class LoginTest {
     @Test
     public void testAuthenticateUser() {
         System.out.println("authenticateUser");
-        Patient patient = null;
-        Login instance = null;
-        Boolean expResult = null;
+        Patient patient = new Patient(null,null);
+        Login instance = new Login(new Patient(null,null));
+        Boolean expResult = false;
         Boolean result = instance.authenticateUser(patient);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+
 }

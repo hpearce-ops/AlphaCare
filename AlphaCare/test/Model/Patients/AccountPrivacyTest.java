@@ -43,12 +43,10 @@ public class AccountPrivacyTest {
     @Test
     public void testGetAccountID() {
         System.out.println("getAccountID");
-        AccountPrivacy instance = null;
+        AccountPrivacy instance = new AccountPrivacy("");
         String expResult = "";
         String result = instance.getAccountID();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +56,8 @@ public class AccountPrivacyTest {
     public void testSetAccountID() {
         System.out.println("setAccountID");
         String accountID = "";
-        AccountPrivacy instance = null;
+        AccountPrivacy instance = new AccountPrivacy("");
         instance.setAccountID(accountID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -71,12 +67,10 @@ public class AccountPrivacyTest {
     public void testVerifyID() {
         System.out.println("verifyID");
         String accountID = "";
-        AccountPrivacy instance = null;
-        Boolean expResult = null;
+        AccountPrivacy instance = new AccountPrivacy("");
+        Boolean expResult = true;
         Boolean result = instance.verifyID(accountID);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,10 +80,8 @@ public class AccountPrivacyTest {
     public void testRemovedAddition() {
         System.out.println("removedAddition");
         String accountID = "";
-        AccountPrivacy instance = null;
+        AccountPrivacy instance = new AccountPrivacy("");
         instance.removedAddition(accountID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -99,10 +91,8 @@ public class AccountPrivacyTest {
     public void testApproveAddition() {
         System.out.println("approveAddition");
         String accountID = "";
-        AccountPrivacy instance = null;
+        AccountPrivacy instance = new AccountPrivacy("");
         instance.approveAddition(accountID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -43,12 +43,10 @@ public class AdminTest {
     @Test
     public void testGetAdminId() {
         System.out.println("getAdminId");
-        Admin instance = null;
+        Admin instance = new Admin("","");
         String expResult = "";
         String result = instance.getAdminId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +56,8 @@ public class AdminTest {
     public void testSetAdminId() {
         System.out.println("setAdminId");
         String adminId = "";
-        Admin instance = null;
+        Admin instance = new Admin("","");
         instance.setAdminId(adminId);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,12 +66,10 @@ public class AdminTest {
     @Test
     public void testGetPassword() {
         System.out.println("getPassword");
-        Admin instance = null;
+        Admin instance = new Admin("","");
         String expResult = "";
         String result = instance.getPassword();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -85,10 +79,8 @@ public class AdminTest {
     public void testSetPassword() {
         System.out.println("setPassword");
         String password = "";
-        Admin instance = null;
+        Admin instance = new Admin("","");
         instance.setPassword(password);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

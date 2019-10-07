@@ -43,12 +43,10 @@ public class PatientTest {
     @Test
     public void testGetPatientID() {
         System.out.println("getPatientID");
-        Patient instance = null;
+        Patient instance = new Patient("","");
         String expResult = "";
         String result = instance.getPatientID();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +56,8 @@ public class PatientTest {
     public void testSetPatientID() {
         System.out.println("setPatientID");
         String patientID = "";
-        Patient instance = null;
+        Patient instance = new Patient("","");
         instance.setPatientID(patientID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,12 +66,10 @@ public class PatientTest {
     @Test
     public void testGetPassWord() {
         System.out.println("getPassWord");
-        Patient instance = null;
+        Patient instance = new Patient("","");
         String expResult = "";
         String result = instance.getPassWord();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -85,10 +79,8 @@ public class PatientTest {
     public void testSetPassWord() {
         System.out.println("setPassWord");
         String passWord = "";
-        Patient instance = null;
+        Patient instance = new Patient("","");
         instance.setPassWord(passWord);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

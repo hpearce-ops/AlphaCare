@@ -5,6 +5,7 @@
  */
 package Model.Patients;
 
+import Model.Admin.Appointment;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,12 +44,10 @@ public class AppointmentManageTest {
     @Test
     public void testAccept() {
         System.out.println("accept");
-        AppointmentManage instance = null;
-        Boolean expResult = null;
+        AppointmentManage instance = new AppointmentManage(new Appointment(null, null, null, null));
+        Boolean expResult = true;
         Boolean result = instance.accept();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,12 +56,10 @@ public class AppointmentManageTest {
     @Test
     public void testDeny() {
         System.out.println("deny");
-        AppointmentManage instance = null;
-        Boolean expResult = null;
+        AppointmentManage instance = new AppointmentManage(new Appointment(null, null, null, null));
+        Boolean expResult = false;
         Boolean result = instance.deny();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

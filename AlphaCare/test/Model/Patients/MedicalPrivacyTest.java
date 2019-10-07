@@ -43,12 +43,10 @@ public class MedicalPrivacyTest {
     @Test
     public void testGetMedicalPersonnel() {
         System.out.println("getMedicalPersonnel");
-        MedicalPrivacy instance = null;
+        MedicalPrivacy instance = new MedicalPrivacy(null);
         Boolean[] expResult = null;
         Boolean[] result = instance.getMedicalPersonnel();
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -58,10 +56,8 @@ public class MedicalPrivacyTest {
     public void testSetMedicalPersonnel() {
         System.out.println("setMedicalPersonnel");
         Boolean[] medicalPersonnel = null;
-        MedicalPrivacy instance = null;
+        MedicalPrivacy instance = new MedicalPrivacy(null);
         instance.setMedicalPersonnel(medicalPersonnel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,10 +66,12 @@ public class MedicalPrivacyTest {
     @Test
     public void testDenyAllPersonnel() {
         System.out.println("denyAllPersonnel");
-        MedicalPrivacy instance = null;
+        Boolean[] boolArr = new Boolean[3];
+        boolArr[0] = true;
+        boolArr[1] = false;
+        boolArr[2] = true;
+        MedicalPrivacy instance = new MedicalPrivacy(boolArr);
         instance.denyAllPersonnel();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -82,10 +80,12 @@ public class MedicalPrivacyTest {
     @Test
     public void testAllowAllPersonnel() {
         System.out.println("allowAllPersonnel");
-        MedicalPrivacy instance = null;
+        Boolean[] boolArr = new Boolean[3];
+        boolArr[0] = true;
+        boolArr[1] = false;
+        boolArr[2] = true;
+        MedicalPrivacy instance = new MedicalPrivacy(boolArr);
         instance.allowAllPersonnel();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -94,13 +94,17 @@ public class MedicalPrivacyTest {
     @Test
     public void testTogglePersonnel() {
         System.out.println("togglePersonnel");
-        Boolean[] array = null;
-        MedicalPrivacy instance = null;
-        Boolean[] expResult = null;
+        Boolean[] array = new Boolean[3];
+        array[0] = true;
+        array[1] = true;
+        array[2] = true;
+        MedicalPrivacy instance = new MedicalPrivacy(array);
+        Boolean[] expResult = new Boolean [3];
+        expResult[0] = true;
+        expResult[1] = true;
+        expResult[2] = true;
         Boolean[] result = instance.togglePersonnel(array);
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -47,12 +47,11 @@ public class AppointmentTest {
     @Test
     public void testGetDate() {
         System.out.println("getDate");
-        Appointment instance = null;
-        Date expResult = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
+        Date expResult = new Date();
         Date result = instance.getDate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -62,10 +61,9 @@ public class AppointmentTest {
     public void testSetDate() {
         System.out.println("setDate");
         Date date = null;
-        Appointment instance = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setDate(date);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -74,12 +72,11 @@ public class AppointmentTest {
     @Test
     public void testGetTime() {
         System.out.println("getTime");
-        Appointment instance = null;
-        LocalTime expResult = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
+        LocalTime expResult = time;
         LocalTime result = instance.getTime();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -89,10 +86,8 @@ public class AppointmentTest {
     public void testSetTime() {
         System.out.println("setTime");
         LocalTime time = null;
-        Appointment instance = null;
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setTime(time);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -101,12 +96,11 @@ public class AppointmentTest {
     @Test
     public void testGetPatient() {
         System.out.println("getPatient");
-        Appointment instance = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(null, new MedicalPersonnel("",""), new Date(), time);
         Patient expResult = null;
         Patient result = instance.getPatient();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -116,10 +110,9 @@ public class AppointmentTest {
     public void testSetPatient() {
         System.out.println("setPatient");
         Patient patient = null;
-        Appointment instance = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setPatient(patient);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -128,12 +121,11 @@ public class AppointmentTest {
     @Test
     public void testGetMedicalPersonnel() {
         System.out.println("getMedicalPersonnel");
-        Appointment instance = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), null, new Date(), time);
         MedicalPersonnel expResult = null;
         MedicalPersonnel result = instance.getMedicalPersonnel();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -143,10 +135,9 @@ public class AppointmentTest {
     public void testSetMedicalPersonnel() {
         System.out.println("setMedicalPersonnel");
         MedicalPersonnel medicalPersonnel = null;
-        Appointment instance = null;
+        LocalTime time = LocalTime.of(1, 1,1,1);
+        Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setMedicalPersonnel(medicalPersonnel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
