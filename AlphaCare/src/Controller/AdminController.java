@@ -5,10 +5,40 @@
  */
 package Controller;
 
-/**
- *
- * @author david
- */
+import Model.Admin.*;
+import View.AdminView;
+import Model.Patients.Patient; 
+
+import java.sql.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class AdminController {
     
+    public AdminController() {
+        AdminView view = new AdminView();
+        view.createdUI();
+    
+        Admin admin = new Admin("Admin", "Admin");
+        Login login = new Login(admin);
+    
+        login.authenticateUser(admin);
+        if(login.authenticateUser(admin) == true) {
+            successfullLogin(admin);
+        }
+        else{
+            failedLogin();
+        }   
+    }
+    
+
+    private void successfullLogin(Admin admin){
+        Patient patient = new Patient("ID12345", "Password!");
+        Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), LocalTime.NOON); 
+    }
+
+    private void failedLogin(){
+        System.out.println("Failed login of Admin.");  
+    }
+
 }
