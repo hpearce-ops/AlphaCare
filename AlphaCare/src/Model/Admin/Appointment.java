@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Admin;
+package Model.Admin;
 
-import Medical.MedicalPersonnel;
-import Patients.Patient;
+import Model.Medical.MedicalPersonnel;
+import Model.Patients.Patient;
 import java.time.LocalTime;
 import java.util.Date;
 

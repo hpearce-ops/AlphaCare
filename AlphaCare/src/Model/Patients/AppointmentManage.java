@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Patients;
+package Model.Patients;
 
-import Admin.Appointment;
+import Model.Admin.Appointment;
 
 /**
  *
  * @author henrypearce
  */
 public class AppointmentManage {
-    private Appointment appt; 
+    private final Appointment appt; 
     //appointment class found in the Admin API
 
     /**

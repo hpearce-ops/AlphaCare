@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Medical;
+package Model.Medical;
 
-import Patients.Patient;
+import Model.Patients.Patient;
 import java.util.ArrayList;
 
 /**
