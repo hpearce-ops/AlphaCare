@@ -47,6 +47,7 @@ public class PatientTest {
         String expResult = "";
         String result = instance.getPatientID();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class PatientTest {
         String patientID = "";
         Patient instance = new Patient("","");
         instance.setPatientID(patientID);
+        System.out.println("Test passed");
     }
 
     /**
@@ -70,6 +72,7 @@ public class PatientTest {
         String expResult = "";
         String result = instance.getPassWord();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -81,6 +84,7 @@ public class PatientTest {
         String passWord = "";
         Patient instance = new Patient("","");
         instance.setPassWord(passWord);
+        System.out.println("Test passed");
     }
     
 }

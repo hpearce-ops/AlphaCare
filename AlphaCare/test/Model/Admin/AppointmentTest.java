@@ -52,6 +52,7 @@ public class AppointmentTest {
         Date expResult = new Date();
         Date result = instance.getDate();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -64,6 +65,7 @@ public class AppointmentTest {
         LocalTime time = LocalTime.of(1, 1,1,1);
         Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setDate(date);
+        System.out.println("Test passed");
     }
 
     /**
@@ -77,6 +79,7 @@ public class AppointmentTest {
         LocalTime expResult = time;
         LocalTime result = instance.getTime();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -88,6 +91,7 @@ public class AppointmentTest {
         LocalTime time = null;
         Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setTime(time);
+        System.out.println("Test passed");
     }
 
     /**
@@ -101,6 +105,7 @@ public class AppointmentTest {
         Patient expResult = null;
         Patient result = instance.getPatient();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -113,6 +118,7 @@ public class AppointmentTest {
         LocalTime time = LocalTime.of(1, 1,1,1);
         Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setPatient(patient);
+        System.out.println("Test passed");
     }
 
     /**
@@ -126,6 +132,7 @@ public class AppointmentTest {
         MedicalPersonnel expResult = null;
         MedicalPersonnel result = instance.getMedicalPersonnel();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -138,6 +145,7 @@ public class AppointmentTest {
         LocalTime time = LocalTime.of(1, 1,1,1);
         Appointment instance = new Appointment(new Patient("",""), new MedicalPersonnel("",""), new Date(), time);
         instance.setMedicalPersonnel(medicalPersonnel);
+        System.out.println("Test passed");
     }
     
 }

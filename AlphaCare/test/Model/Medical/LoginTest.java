@@ -43,11 +43,10 @@ public class LoginTest {
     @Test
     public void testSetMedicalPersonnel() {
         System.out.println("setMedicalPersonnel");
-        MedicalPersonnel medicalPersonnel = null;
-        Login instance = null;
+        MedicalPersonnel medicalPersonnel = new MedicalPersonnel(null, null);
+        Login instance = new Login(null);
         instance.setMedicalPersonnel(medicalPersonnel);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -56,12 +55,11 @@ public class LoginTest {
     @Test
     public void testGetMedicalPersonnel() {
         System.out.println("getMedicalPersonnel");
-        Login instance = null;
+        Login instance = new Login(null);
         MedicalPersonnel expResult = null;
         MedicalPersonnel result = instance.getMedicalPersonnel();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -70,13 +68,12 @@ public class LoginTest {
     @Test
     public void testAuthenticateUser() {
         System.out.println("authenticateUser");
-        MedicalPersonnel medicalPersonnel = null;
-        Login instance = null;
-        Boolean expResult = null;
+        MedicalPersonnel medicalPersonnel = new MedicalPersonnel(null,null);
+        Login instance = new Login(null);
+        Boolean expResult = true;
         Boolean result = instance.authenticateUser(medicalPersonnel);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
     
 }

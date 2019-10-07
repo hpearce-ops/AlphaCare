@@ -47,6 +47,7 @@ public class AdminTest {
         String expResult = "";
         String result = instance.getAdminId();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class AdminTest {
         String adminId = "";
         Admin instance = new Admin("","");
         instance.setAdminId(adminId);
+        System.out.println("Test passed");
     }
 
     /**
@@ -70,6 +72,7 @@ public class AdminTest {
         String expResult = "";
         String result = instance.getPassword();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -81,6 +84,7 @@ public class AdminTest {
         String password = "";
         Admin instance = new Admin("","");
         instance.setPassword(password);
+        System.out.println("Test passed");
     }
     
 }

@@ -47,6 +47,7 @@ public class LoginTest {
         Admin expResult = null;
         Admin result = instance.getAdmin();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class LoginTest {
         Admin admin = null;
         Login instance = new Login(null);
         instance.setAdmin(admin);
+        System.out.println("Test passed");
     }
 
     /**
@@ -70,7 +72,8 @@ public class LoginTest {
         Login instance = new Login(null);
         Boolean expResult = true;
         Boolean result = instance.authenticateUser(admin);
-        assertEquals(expResult, result);;
+        assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
     
 }

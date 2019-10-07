@@ -48,6 +48,7 @@ public class MedicalRecordTest {
         String expResult = "";
         String result = instance.getPatientID();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -59,6 +60,7 @@ public class MedicalRecordTest {
         String patientID = "";
         MedicalRecord instance = new MedicalRecord("","");
         instance.setPatientID(patientID);
+        System.out.println("Test passed");
     }
 
     /**
@@ -71,6 +73,7 @@ public class MedicalRecordTest {
         String expResult = "";
         String result = instance.getName();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -82,6 +85,7 @@ public class MedicalRecordTest {
         String name = "";
         MedicalRecord instance = new MedicalRecord("","");
         instance.setName(name);
+        System.out.println("Test passed");
     }
 
     /**
@@ -94,6 +98,7 @@ public class MedicalRecordTest {
         File expResult = null;
         File result = instance.getMedicalRecords();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -105,6 +110,7 @@ public class MedicalRecordTest {
         File MedicalRecords = null;
         MedicalRecord instance = new MedicalRecord("","");
         instance.setMedicalRecords(MedicalRecords);
+        System.out.println("Test passed");
     }
 
     /**
@@ -116,6 +122,7 @@ public class MedicalRecordTest {
         File file = null;
         MedicalRecord instance = new MedicalRecord("","");
         instance.uploadMedicalRecord(file);
+        System.out.println("Test passed");
     }
 
     /**
@@ -126,6 +133,7 @@ public class MedicalRecordTest {
         System.out.println("deleteMedicalRecord");
         MedicalRecord instance = new MedicalRecord("","");
         instance.deleteMedicalRecord();
+        System.out.println("Test passed");
     }
     
 }

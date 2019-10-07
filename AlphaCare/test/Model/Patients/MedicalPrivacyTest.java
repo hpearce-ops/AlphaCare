@@ -47,6 +47,7 @@ public class MedicalPrivacyTest {
         Boolean[] expResult = null;
         Boolean[] result = instance.getMedicalPersonnel();
         assertArrayEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class MedicalPrivacyTest {
         Boolean[] medicalPersonnel = null;
         MedicalPrivacy instance = new MedicalPrivacy(null);
         instance.setMedicalPersonnel(medicalPersonnel);
+        System.out.println("Test passed");
     }
 
     /**
@@ -72,6 +74,7 @@ public class MedicalPrivacyTest {
         boolArr[2] = true;
         MedicalPrivacy instance = new MedicalPrivacy(boolArr);
         instance.denyAllPersonnel();
+        System.out.println("Test passed");
     }
 
     /**
@@ -86,6 +89,7 @@ public class MedicalPrivacyTest {
         boolArr[2] = true;
         MedicalPrivacy instance = new MedicalPrivacy(boolArr);
         instance.allowAllPersonnel();
+        System.out.println("Test passed");
     }
 
     /**
@@ -105,6 +109,7 @@ public class MedicalPrivacyTest {
         expResult[2] = true;
         Boolean[] result = instance.togglePersonnel(array);
         assertArrayEquals(expResult, result);
+        System.out.println("Test passed");
     }
     
 }

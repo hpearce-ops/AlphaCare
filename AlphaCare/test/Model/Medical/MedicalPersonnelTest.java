@@ -45,12 +45,11 @@ public class MedicalPersonnelTest {
     @Test
     public void testGetPatient() {
         System.out.println("getPatient");
-        MedicalPersonnel instance = null;
-        ArrayList<Patient> expResult = null;
+        MedicalPersonnel instance = new MedicalPersonnel(null,null);
+        ArrayList<Patient> expResult = new ArrayList<>();
         ArrayList<Patient> result = instance.getPatient();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -59,11 +58,10 @@ public class MedicalPersonnelTest {
     @Test
     public void testSetPatientList() {
         System.out.println("setPatientList");
-        ArrayList<Patient> patientList = null;
-        MedicalPersonnel instance = null;
+        ArrayList<Patient> patientList = new ArrayList<>();
+        MedicalPersonnel instance = new MedicalPersonnel(null, null);
         instance.setPatientList(patientList);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -72,12 +70,11 @@ public class MedicalPersonnelTest {
     @Test
     public void testGetPersonnelID() {
         System.out.println("getPersonnelID");
-        MedicalPersonnel instance = null;
+        MedicalPersonnel instance = new MedicalPersonnel("","");
         String expResult = "";
         String result = instance.getPersonnelID();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -87,10 +84,9 @@ public class MedicalPersonnelTest {
     public void testSetPersonnelID() {
         System.out.println("setPersonnelID");
         String personnelID = "";
-        MedicalPersonnel instance = null;
+        MedicalPersonnel instance = new MedicalPersonnel("","");
         instance.setPersonnelID(personnelID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -99,12 +95,11 @@ public class MedicalPersonnelTest {
     @Test
     public void testGetPassWord() {
         System.out.println("getPassWord");
-        MedicalPersonnel instance = null;
+        MedicalPersonnel instance = new MedicalPersonnel("","");
         String expResult = "";
         String result = instance.getPassWord();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -114,10 +109,9 @@ public class MedicalPersonnelTest {
     public void testSetPassWord() {
         System.out.println("setPassWord");
         String passWord = "";
-        MedicalPersonnel instance = null;
+        MedicalPersonnel instance = new MedicalPersonnel("","");
         instance.setPassWord(passWord);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
 
     /**
@@ -126,11 +120,10 @@ public class MedicalPersonnelTest {
     @Test
     public void testAddPatient() {
         System.out.println("addPatient");
-        Patient patient = null;
-        MedicalPersonnel instance = null;
+        Patient patient = new Patient(null,null);
+        MedicalPersonnel instance = new MedicalPersonnel(null, null);
         instance.addPatient(patient);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test passed");
     }
     
 }

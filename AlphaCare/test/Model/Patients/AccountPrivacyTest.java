@@ -47,6 +47,7 @@ public class AccountPrivacyTest {
         String expResult = "";
         String result = instance.getAccountID();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class AccountPrivacyTest {
         String accountID = "";
         AccountPrivacy instance = new AccountPrivacy("");
         instance.setAccountID(accountID);
+        System.out.println("Test passed");
     }
 
     /**
@@ -71,6 +73,7 @@ public class AccountPrivacyTest {
         Boolean expResult = true;
         Boolean result = instance.verifyID(accountID);
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -82,6 +85,7 @@ public class AccountPrivacyTest {
         String accountID = "";
         AccountPrivacy instance = new AccountPrivacy("");
         instance.removedAddition(accountID);
+        System.out.println("Test passed");
     }
 
     /**
@@ -93,6 +97,7 @@ public class AccountPrivacyTest {
         String accountID = "";
         AccountPrivacy instance = new AccountPrivacy("");
         instance.approveAddition(accountID);
+        System.out.println("Test passed");
     }
     
 }

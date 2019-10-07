@@ -48,6 +48,7 @@ public class AppointmentManageTest {
         Boolean expResult = true;
         Boolean result = instance.accept();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -60,6 +61,7 @@ public class AppointmentManageTest {
         Boolean expResult = false;
         Boolean result = instance.deny();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
     
 }

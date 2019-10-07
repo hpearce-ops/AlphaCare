@@ -47,6 +47,7 @@ public class LoginTest {
         Patient expResult = null;
         Patient result = instance.getPatient();
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
     /**
@@ -58,6 +59,7 @@ public class LoginTest {
         Patient patient = null;
         Login instance = new Login(null);
         instance.setPatient(patient);
+        System.out.println("Test passed");
     }
 
     /**
@@ -71,6 +73,7 @@ public class LoginTest {
         Boolean expResult = false;
         Boolean result = instance.authenticateUser(patient);
         assertEquals(expResult, result);
+        System.out.println("Test passed");
     }
 
 }
