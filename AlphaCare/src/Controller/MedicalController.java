@@ -32,14 +32,9 @@ public class MedicalController {
         if(login.authenticateUser(personnel)){
             System.out.println("Login successfull");
         }else{
-<<<<<<< HEAD
             System.out.println("login fail");
         }                       
-=======
-            System.out.println("login fail);
+        System.out.println("login fail");
         } 
-                    
->>>>>>> 97d61b30be6cad6da1fb1b288218edd470725af4
     }
-}
 
