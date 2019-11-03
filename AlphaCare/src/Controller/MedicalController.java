@@ -9,12 +9,7 @@ package Controller;
 import Model.Medical.Login;
 import Model.Medical.MedicalPersonnel;
 import View.MedicalView;
-import Model.Patients.Patient;
 
-import java.sql.Date;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
 /**
  *
  * @author david
@@ -34,7 +29,6 @@ public class MedicalController {
         }else{
             System.out.println("login fail");
         }                       
-        System.out.println("login fail");
         } 
     }
 

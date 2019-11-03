@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package Model.Medical;
-
+import Login.LoginInterface;
 /**
  *
  * @author henrypearce
  */
-public class Login {
+public class Login implements LoginInterface{
     private MedicalPersonnel medicalPersonnel;
 
     /**
@@ -43,5 +43,10 @@ public class Login {
      */
     public Boolean authenticateUser(MedicalPersonnel medicalPersonnel){
         return true || false; 
+    }
+
+    @Override
+    public boolean authenticateUser() {
+        return true || false;
     }
 }

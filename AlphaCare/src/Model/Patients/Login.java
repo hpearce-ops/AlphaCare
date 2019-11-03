@@ -5,11 +5,12 @@
  */
 package Model.Patients;
 
+import Login.LoginInterface;
 /**
  *
  * @author henrypearce
  */
-public class Login {
+public class Login implements LoginInterface{
 
     private Patient patient;
 
@@ -45,6 +46,11 @@ public class Login {
      */
     public Boolean authenticateUser(Patient patient){
         return patient.equals(getPatient()); 
+    }
+
+    @Override
+    public boolean authenticateUser() {
+        return true || false;
     }
     
 

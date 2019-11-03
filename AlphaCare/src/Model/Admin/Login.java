@@ -6,12 +6,13 @@
 package Model.Admin;
 
 import Model.Admin.Admin;
+import Login.LoginInterface;
 
 /**
  *
  * @author henrypearce
  */
-public class Login {
+public class Login implements LoginInterface{
 
     private Admin admin;
 
@@ -46,6 +47,11 @@ public class Login {
      */
     public Boolean authenticateUser(Admin admin){
         return true || false; 
+    }
+
+    @Override
+    public boolean authenticateUser() {
+        return true || false;
     }
 
 }
