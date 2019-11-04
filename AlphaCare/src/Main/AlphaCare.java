@@ -17,9 +17,10 @@ public class AlphaCare {
      * @param args the command line arguments
      */
     public static void main(String[] args) {  
-        selectUserAPI(1);       
-        selectUserAPI(2);
-        selectUserAPI(3); 
+        CreateUserController create = new CreateUserController();
+//        selectUserAPI(1);       
+//        selectUserAPI(2);
+//        selectUserAPI(3); 
     }
     
     /**

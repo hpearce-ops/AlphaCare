@@ -1,0 +1,104 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package View;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+/**
+ *
+ * @author david
+ */
+public class CreateUserView {
+
+    JFrame frame;
+
+    public CreateUserView() {
+        this.frame = new JFrame("Create User View");
+    }
+
+    public void createdUI() {
+        JPanel panel = new JPanel(new GridLayout(5, 1));
+        panel.setSize(300, 100);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 300);
+        JButton checkPassWordButton = new JButton("Check Password Strength");
+        JLabel userNameLabel = new JLabel("Username:");
+        JTextField userNameField = new JTextField(15);
+        JTextField passWordField = new JTextField(15);
+        JTextField confirmPassWordField = new JTextField(15);
+        panel.add(userNameLabel);
+        panel.add(userNameField);
+        panel.add(new JLabel("Password: "));
+        panel.add(passWordField);
+        panel.add(new JLabel("Confirm Password: "));
+        panel.add(confirmPassWordField);
+        
+        JPanel strengthPanel = new JPanel();
+        strengthPanel.setSize(300, 100);
+        
+        checkPassWordButton.addActionListener(e -> {
+            strengthPanel.removeAll();
+            strengthPanel.setBackground(Color.LIGHT_GRAY);
+            if(checkPasswordStrength(confirmPassWordField.getText()) && confirmPassWordField.getText().equals(passWordField.getText())){
+                strengthPanel.setBackground(Color.green);
+            }else if(checkPasswordStrength(confirmPassWordField.getText()) && !confirmPassWordField.getText().equals(passWordField.getText())){
+                strengthPanel.add(new JLabel("Password fields do not match"));
+                strengthPanel.updateUI();
+            }else{
+                strengthPanel.setBackground(Color.red);
+            }
+        });
+        
+        
+        
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        buttonPanel.setSize(300,100);
+        buttonPanel.add(checkPassWordButton);
+        
+        frame.setContentPane(new JPanel(new BorderLayout()));
+        frame.getContentPane().add(panel, BorderLayout.NORTH);
+        frame.getContentPane().add(strengthPanel, BorderLayout.CENTER);
+        frame.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
+        frame.setVisible(true);
+    }
+
+    public boolean checkPasswordStrength(String passWord) {
+        int len = passWord.length();
+        int digit = 0;
+        int lowerCase = 0;
+        int upperCase = 0;
+        int count = 0;
+        char ch;
+        if (len >= 7) {
+            while (count < len) {
+                ch = passWord.charAt(count);
+                if (Character.isDigit(ch)) {
+                    digit = digit + 1;
+                }
+                if (Character.isLowerCase(ch)) {
+                    lowerCase = lowerCase + 1;
+                }
+                if (Character.isUpperCase(ch)) {
+                    upperCase = upperCase + 1;
+                }
+                count = count + 1;
+            }
+        }
+        if (digit >= 1 && lowerCase >= 1 && upperCase >= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
