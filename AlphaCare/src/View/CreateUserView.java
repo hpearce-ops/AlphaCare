@@ -29,9 +29,9 @@ public class CreateUserView {
 
     public void createdUI() {
         JPanel panel = new JPanel(new GridLayout(5, 1));
-        panel.setSize(300, 100);
+        panel.setSize(500, 100);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 300);
+        frame.setSize(500, 300);
         JButton checkPassWordButton = new JButton("Check Password Strength");
         JLabel userNameLabel = new JLabel("Username:");
         JTextField userNameField = new JTextField(15);
@@ -43,19 +43,23 @@ public class CreateUserView {
         panel.add(passWordField);
         panel.add(new JLabel("Confirm Password: "));
         panel.add(confirmPassWordField);
+        panel.add(new JLabel("Password must contain at least one digit, one uppercase letter, one lower case letter, and be 7 or more "
+                + "characters long"));
         
         JPanel strengthPanel = new JPanel();
-        strengthPanel.setSize(300, 100);
+        strengthPanel.setSize(500, 100);
         
         checkPassWordButton.addActionListener(e -> {
             strengthPanel.removeAll();
-            strengthPanel.setBackground(Color.LIGHT_GRAY);
+            strengthPanel.setOpaque(false);
             if(checkPasswordStrength(confirmPassWordField.getText()) && confirmPassWordField.getText().equals(passWordField.getText())){
+                strengthPanel.setOpaque(true);
                 strengthPanel.setBackground(Color.green);
             }else if(checkPasswordStrength(confirmPassWordField.getText()) && !confirmPassWordField.getText().equals(passWordField.getText())){
                 strengthPanel.add(new JLabel("Password fields do not match"));
                 strengthPanel.updateUI();
             }else{
+                strengthPanel.setOpaque(true);
                 strengthPanel.setBackground(Color.red);
             }
         });
@@ -63,7 +67,7 @@ public class CreateUserView {
         
         
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        buttonPanel.setSize(300,100);
+        buttonPanel.setSize(500,100);
         buttonPanel.add(checkPassWordButton);
         
         frame.setContentPane(new JPanel(new BorderLayout()));
