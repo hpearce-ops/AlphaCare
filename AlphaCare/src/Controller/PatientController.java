@@ -23,7 +23,7 @@ public class PatientController {
         PatientView view = new PatientView(); 
         view.createdUI();
         
-        Patient patient = new Patient("ID12345", "Password!"); 
+        Patient patient = new Patient("Jane Doe", "ID12345", "Password!"); 
         Login login = new Login(patient); 
         
         login.authenticateUser(patient); 
@@ -47,7 +47,7 @@ public class PatientController {
         AccountPrivacy accPrivacy = new AccountPrivacy("ID98765"); 
         accPrivacy.approveAddition(accPrivacy.getAccountID());
         accPrivacy.removedAddition(accPrivacy.getAccountID());
-        Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), LocalTime.NOON); 
+        Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), "12:00 pm"); 
         AppointmentManage apptManage = new AppointmentManage(appt);
         apptManage.accept();
         apptManage.deny(); 

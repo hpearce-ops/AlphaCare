@@ -33,8 +33,8 @@ public class AdminController {
     
 
     private void successfullLogin(Admin admin){
-        Patient patient = new Patient("ID12345", "Password!");
-        Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), LocalTime.NOON); 
+        Patient patient = new Patient("John Doe", "ID12345", "Password!");
+        Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), "12:00 pm"); 
     }
 
     private void failedLogin(){
