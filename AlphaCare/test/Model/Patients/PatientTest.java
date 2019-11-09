@@ -43,7 +43,7 @@ public class PatientTest {
     @Test
     public void testGetPatientID() {
         System.out.println("getPatientID");
-        Patient instance = new Patient("","");
+        Patient instance = new Patient("","","");
         String expResult = "";
         String result = instance.getPatientID();
         assertEquals(expResult, result);
@@ -57,7 +57,7 @@ public class PatientTest {
     public void testSetPatientID() {
         System.out.println("setPatientID");
         String patientID = "";
-        Patient instance = new Patient("","");
+        Patient instance = new Patient("","","");
         instance.setPatientID(patientID);
         System.out.println("Test passed");
     }
@@ -68,7 +68,7 @@ public class PatientTest {
     @Test
     public void testGetPassWord() {
         System.out.println("getPassWord");
-        Patient instance = new Patient("","");
+        Patient instance = new Patient("","","");
         String expResult = "";
         String result = instance.getPassWord();
         assertEquals(expResult, result);
@@ -82,7 +82,7 @@ public class PatientTest {
     public void testSetPassWord() {
         System.out.println("setPassWord");
         String passWord = "";
-        Patient instance = new Patient("","");
+        Patient instance = new Patient("","","");
         instance.setPassWord(passWord);
         System.out.println("Test passed");
     }

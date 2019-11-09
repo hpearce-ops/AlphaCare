@@ -120,7 +120,7 @@ public class MedicalPersonnelTest {
     @Test
     public void testAddPatient() {
         System.out.println("addPatient");
-        Patient patient = new Patient(null,null);
+        Patient patient = new Patient(null,null,null);
         MedicalPersonnel instance = new MedicalPersonnel(null, null);
         instance.addPatient(patient);
         System.out.println("Test passed");

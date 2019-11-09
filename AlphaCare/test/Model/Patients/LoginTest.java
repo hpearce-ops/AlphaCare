@@ -68,8 +68,8 @@ public class LoginTest {
     @Test
     public void testAuthenticateUser() {
         System.out.println("authenticateUser");
-        Patient patient = new Patient(null,null);
-        Login instance = new Login(new Patient(null,null));
+        Patient patient = new Patient(null,null,null);
+        Login instance = new Login(new Patient(null,null,null));
         Boolean expResult = false;
         Boolean result = instance.authenticateUser(patient);
         assertEquals(expResult, result);
