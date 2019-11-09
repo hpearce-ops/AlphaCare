@@ -7,7 +7,6 @@ package Model.Admin;
 
 import Model.Medical.MedicalPersonnel;
 import Model.Patients.Patient;
-import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -18,7 +17,7 @@ public class Appointment {
     private Patient patient;
     private MedicalPersonnel medicalPersonnel;
     private Date date;
-    private LocalTime time;
+    private String time;
 
     /**
      *
@@ -27,7 +26,7 @@ public class Appointment {
      * @param date
      * @param time
      */
-    public Appointment(Patient patient, MedicalPersonnel medicalPersonnel, Date date, LocalTime time) {
+    public Appointment(Patient patient, MedicalPersonnel medicalPersonnel, Date date, String time) {
         this.patient = patient;
         this.medicalPersonnel = medicalPersonnel;
         this.date = date;
@@ -54,7 +53,7 @@ public class Appointment {
      *
      * @return a LocalTime object for Appointment instance
      */
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
@@ -62,7 +61,7 @@ public class Appointment {
      * sets the LocalTime for the Appointment instance
      * @param time
      */
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
