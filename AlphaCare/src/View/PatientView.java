@@ -11,18 +11,10 @@ import javax.swing.*;
  *
  * @author david
  */
-public class PatientView {
-    JFrame frame;
+public class PatientView extends AbstractView {
 
     public PatientView() {
         this.frame = new JFrame("Patient View");
-    }
- 
-    public void createdUI() {
-       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       frame.setSize(300,300);
-       JButton button = new JButton("Simple UI");
-       frame.getContentPane().add(button); // Adds Button to content pane of frame
-       frame.setVisible(true);   
-    }
+    }    
+    
 }

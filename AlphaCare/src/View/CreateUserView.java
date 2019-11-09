@@ -64,8 +64,6 @@ public class CreateUserView {
             }
         });
         
-        
-        
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.setSize(500,100);
         buttonPanel.add(checkPassWordButton);

@@ -5,25 +5,26 @@
  */
 package View;
 
-import javax.swing.JButton;
+import Data.PatientArray;
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import javax.swing.JList;
 
 /**
  *
  * @author david
  */
-public class MedicalView {
-    JFrame frame;
+public class MedicalView extends AbstractView {
 
     public MedicalView() {
         this.frame = new JFrame("Medical View");
+        this.patients = new PatientArray();
+        this.patientList = new JList<>(patients.getArrayNames());
     }
- 
-    public void createdUI() {
-       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-       frame.setSize(300,300);
-       JButton button = new JButton("Simple UI");
-       frame.getContentPane().add(button); // Adds Button to content pane of frame
-       frame.setVisible(true);   
-    } 
+    
+    @Override
+    public void userSpecificUI() {
+        frame.getContentPane().add(patientList, BorderLayout.LINE_END);
+    }
+
 }
