@@ -10,15 +10,20 @@ package Model.Patients;
  * @author david
  */
 public class Patient {
+
+    private String patientName;
     private String patientID;
     private String passWord;
 
     /**
-     * This is the default constructor for Patient. 
+     * This is the default constructor for Patient.
+     *
+     * @param patientName
      * @param patientID
      * @param passWord
      */
-    public Patient(String patientID, String passWord) {
+    public Patient(String patientName, String patientID, String passWord) {
+        this.patientName = patientName;
         this.patientID = patientID;
         this.passWord = passWord;
     }
@@ -54,6 +59,13 @@ public class Patient {
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
-    
-    
+
+    public String getPatientName() {
+        return patientName;
+    }
+
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
+    }
+
 }
