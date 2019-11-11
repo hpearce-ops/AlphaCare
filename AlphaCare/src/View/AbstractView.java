@@ -36,10 +36,8 @@ public class AbstractView {
     
     public void createdUI() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1000, 500);
-        JButton button = new JButton("Success");
+        frame.setSize(500, 500);
         userSpecificUI(); 
-        frame.getContentPane().add(button, BorderLayout.CENTER); // Adds Button to content pane of frame
         frame.setVisible(true);
     } 
 
