@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-ppackage Controller;
+package Controller;
 
 import static Controller.LoginController.loginView;
 import View.CreateUserView;
