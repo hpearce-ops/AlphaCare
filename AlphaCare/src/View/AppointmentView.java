@@ -6,6 +6,7 @@
 package View;
 
 import Model.Admin.Appointment;
+import Data.AppointmentArray;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -23,12 +24,13 @@ import javax.swing.JPanel;
 public class AppointmentView extends AbstractView {  
     Appointment apt;
     JButton no; 
-
+    
     public AppointmentView(Appointment apt) {
         this.frame = new JFrame("Admin View");
         this.apt = apt;
         this.enter = new JButton("Yes");
         this.no = new JButton("No"); 
+        this.appointments = new AppointmentArray();
     }
     
     @Override
@@ -54,6 +56,7 @@ public class AppointmentView extends AbstractView {
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == enter) {
+                appointments.makeAppointment(apt);
                 frame.setVisible(false);
                 frame.dispose();
             } else if (e.getSource() == no) {

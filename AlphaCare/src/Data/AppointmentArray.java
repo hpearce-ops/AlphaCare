@@ -6,19 +6,17 @@
 package Data;
 
 import Model.Admin.Appointment;
-import Model.Medical.MedicalPersonnel;
 import Model.Patients.Patient;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class AppointmentArray {
     private ArrayList<Appointment> appointmentList;
     
     public AppointmentArray(){
-        
+        appointmentList = new ArrayList<>();
     }
-    public void makeAppointment(Patient patient, MedicalPersonnel medicalPersonnel, Date date, String time){
-        appointmentList.add(new Appointment(patient,medicalPersonnel, date, time));
+    public void makeAppointment(Appointment apt){
+        appointmentList.add(apt);
     }
     public Appointment getAppointments(Patient patient){
         for(int i = 0; i < appointmentList.size();i++){
