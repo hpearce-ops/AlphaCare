@@ -7,7 +7,6 @@ package View;
 
 import Data.DoctorArray;
 import Data.PatientArray;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
@@ -23,10 +22,9 @@ import org.jdatepicker.impl.UtilDateModel;
 public class AbstractView {
     JFrame frame;
     PatientArray patients;
-    DoctorArray medicalPersonell;
-    JList medList;
+    DoctorArray doctors; 
     JList patientList;
-    JList appointmentList; 
+    JList doctorList; 
     UtilDateModel model;
     JDatePanelImpl datePanel;
     JDatePickerImpl datePicker;
