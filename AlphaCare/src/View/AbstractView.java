@@ -29,7 +29,7 @@ public class AbstractView {
     JDatePanelImpl datePanel;
     JDatePickerImpl datePicker;
     JTextField timeField; 
-    JButton enter; 
+    JButton enter;
     
     public AbstractView() {
         //leave initialization to specified classes

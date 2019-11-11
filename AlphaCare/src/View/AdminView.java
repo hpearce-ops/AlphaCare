@@ -20,8 +20,8 @@ import org.jdatepicker.impl.UtilDateModel;
 
 import Data.PatientArray;
 import Model.Admin.Appointment;
-import Model.Medical.MedicalPersonnel;
-import Model.Patients.Patient;
+//import Model.Medical.MedicalPersonnel;
+//import Model.Patients.Patient;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
@@ -62,11 +62,7 @@ public class AdminView extends AbstractView {
         model.setSelected(true);
         timeField.setText("ENTER TIME HERE");
         ActionListener appointment = new AppointmentListener();
-//        ActionListener calendar = new CalendarListener();
-//        ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
-//        datePicker.addActionListener(calendar);
-//        patientList.addListSelectionListener(patient);
         interactionPanel.add(new JLabel("Patients")); 
         interactionPanel.add(new JLabel("Medical Personnel"));
         interactionPanel.add(patientList);
@@ -82,14 +78,12 @@ public class AdminView extends AbstractView {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-//            Date selectedDate = (Date) datePicker.getModel().getValue();
-//            String selectedName = (String) patientList.getSelectedValue();
-//            String selectedTime = (String) timeField.getText();
-//            Patient patient = new Patient(selectedName, "12345678", "password1");
             Appointment apt = new Appointment(patients.findPatient((String) patientList.getSelectedValue()), 
                     doctors.findDoc((String) doctorList.getSelectedValue()), 
                     (Date) datePicker.getModel().getValue(), (String) timeField.getText());
             System.out.println(apt.getAppointment());
+            AppointmentView view = new AppointmentView(apt);
+            view.createdUI();
         }
     }
 
