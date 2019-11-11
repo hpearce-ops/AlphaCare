@@ -99,5 +99,9 @@ public class Appointment {
         this.medicalPersonnel = medicalPersonnel;
     }
     
+    public String getAppointment(){
+        return patient.getPatientName() + medicalPersonnel.getPersonnelID() + date + time; 
+    }
+    
     
 }
