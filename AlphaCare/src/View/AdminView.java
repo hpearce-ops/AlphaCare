@@ -21,8 +21,11 @@ import Data.PatientArray;
 import Model.Admin.Appointment; 
 import Model.Medical.MedicalPersonnel; 
 import Model.Patients.Patient;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -50,6 +53,9 @@ public class AdminView extends AbstractView {
     
     @Override
     public void userSpecificUI() {
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel interactionPanel = new JPanel(new GridLayout(0,2)); 
+        JPanel appointmentPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         model.setDate(2019, 11, 3);
         model.setSelected(true);
         timeField.setText("ENTER TIME HERE");
@@ -59,10 +65,12 @@ public class AdminView extends AbstractView {
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
         patientList.addListSelectionListener(patient);
-        frame.getContentPane().add(enter, BorderLayout.NORTH); 
-        frame.getContentPane().add(datePicker, BorderLayout.LINE_START);
-        frame.getContentPane().add(patientList, BorderLayout.LINE_END);
-        frame.getContentPane().add(timeField, BorderLayout.SOUTH); 
+        interactionPanel.add(patientList); 
+        interactionPanel.add(datePicker); 
+        interactionPanel.add(timeField); 
+        buttonPanel.add(enter); 
+        frame.getContentPane().add(interactionPanel, BorderLayout.NORTH); 
+        frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
     }
 
     private class AppointmentListener implements ActionListener {
@@ -71,10 +79,10 @@ public class AdminView extends AbstractView {
            Date selectedDate = (Date) datePicker.getModel().getValue();
            String selectedName = (String) patientList.getSelectedValue();
            String selectedTime = (String) timeField.getText(); 
-           MedicalPersonnel DrCarder = new MedicalPersonnel("doctor", "12345678");
+           MedicalPersonnel doctor1 = new MedicalPersonnel("Dr. Carder", "12345678");
            Patient patient = new Patient(selectedName, "12345678", "password1"); 
-           Appointment apt = new Appointment(patient, DrCarder, selectedDate, selectedTime);
-           System.out.println(apt); 
+           Appointment apt = new Appointment(patient, doctor1, selectedDate, selectedTime);
+           System.out.println(apt.getAppointment()); 
         }      
     }
     
