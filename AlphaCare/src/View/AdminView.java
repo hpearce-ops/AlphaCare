@@ -19,6 +19,7 @@ import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 
 import Data.PatientArray;
+import Data.AppointmentArray;
 import Model.Admin.Appointment;
 //import Model.Medical.MedicalPersonnel;
 //import Model.Patients.Patient;

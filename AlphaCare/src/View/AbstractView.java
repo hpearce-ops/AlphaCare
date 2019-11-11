@@ -5,6 +5,7 @@
  */
 package View;
 
+import Data.AppointmentArray;
 import Data.DoctorArray;
 import Data.PatientArray;
 import javax.swing.JButton;
@@ -23,6 +24,8 @@ public class AbstractView {
     JFrame frame;
     PatientArray patients;
     DoctorArray doctors;
+    AppointmentArray appointments;
+    JList appointmentList;
     JList patientList;
     JList doctorList; 
     UtilDateModel model;
