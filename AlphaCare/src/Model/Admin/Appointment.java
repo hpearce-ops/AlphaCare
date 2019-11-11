@@ -38,7 +38,7 @@ public class Appointment {
      * @return a Date object for the appointment date
      */
     public Date getDate() {
-        return date;
+        return date; 
     }
 
     /**
@@ -64,8 +64,6 @@ public class Appointment {
     public void setTime(String time) {
         this.time = time;
     }
-
-
 
     /**
      *
@@ -99,8 +97,13 @@ public class Appointment {
         this.medicalPersonnel = medicalPersonnel;
     }
     
+    public String getRealDate() {
+        String temp = date.toString().substring(0, 9); 
+        return temp;
+    }
+    
     public String getAppointment(){
-        return patient.getPatientName() + medicalPersonnel.getPersonnelID() + date + time; 
+        return patient.getPatientName() + ", " + medicalPersonnel.getPersonnelID() + ", " + getRealDate() + ", " + time; 
     }
     
     
