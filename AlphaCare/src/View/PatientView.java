@@ -17,7 +17,7 @@ import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 
-import Data.PatientArray;
+import Data.DoctorArray;
 import Model.Admin.Appointment; 
 import Model.Medical.MedicalPersonnel; 
 import Model.Patients.Patient;
@@ -34,8 +34,8 @@ public class PatientView extends AbstractView {
 
     public PatientView() {
         this.frame = new JFrame("Patient View");
-        this.patients = new PatientArray();
-        this.patientList = new JList<>(patients.getArrayNames());
+        this.medicalPersonell = new DoctorArray();
+        this.medList = new JList<>(medicalPersonell.getArrayDocs());
         this.model = new UtilDateModel();
         this.timeField = new JTextField();
         this.enter = new JButton("Enter"); 
@@ -57,10 +57,10 @@ public class PatientView extends AbstractView {
         ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
-        patientList.addListSelectionListener(patient);
+        medList.addListSelectionListener(patient);
         frame.getContentPane().add(enter, BorderLayout.NORTH); 
         frame.getContentPane().add(datePicker, BorderLayout.LINE_START);
-        frame.getContentPane().add(patientList, BorderLayout.LINE_END);
+        frame.getContentPane().add(medList, BorderLayout.LINE_END);
         frame.getContentPane().add(timeField, BorderLayout.SOUTH); 
     }
 
@@ -68,7 +68,7 @@ public class PatientView extends AbstractView {
         @Override
         public void actionPerformed(ActionEvent e) {
            Date selectedDate = (Date) datePicker.getModel().getValue();
-           String selectedName = (String) patientList.getSelectedValue();
+           String selectedName = (String) medList.getSelectedValue();
            String selectedTime = (String) timeField.getText(); 
            MedicalPersonnel DrCarder = new MedicalPersonnel("Jane Doe", "12345678");
            Patient patient = new Patient(selectedName, "12345678", "password1"); 
@@ -88,7 +88,7 @@ public class PatientView extends AbstractView {
     private class PatientListener implements ListSelectionListener {
         @Override
         public void valueChanged(ListSelectionEvent e) {
-            String selectedName = (String) patientList.getSelectedValue();
+            String selectedName = (String) medList.getSelectedValue();
             System.out.println(selectedName);
         }
     }    
