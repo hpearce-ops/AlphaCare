@@ -21,8 +21,11 @@ import Data.DoctorArray;
 import Model.Admin.Appointment; 
 import Model.Medical.MedicalPersonnel; 
 import Model.Patients.Patient;
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -49,6 +52,9 @@ public class PatientView extends AbstractView {
     
     @Override
     public void userSpecificUI() {
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        JPanel interactionPanel = new JPanel(new GridLayout(0,2)); 
+        JPanel appointmentPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         model.setDate(2019, 11, 3);
         model.setSelected(true);
         timeField.setText("ENTER TIME HERE");
