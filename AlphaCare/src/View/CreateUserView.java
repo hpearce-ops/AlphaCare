@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package View;
 
+import Controller.CreateUserController;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -19,19 +15,20 @@ import javax.swing.JPanel;
  *
  * @author david
  */
-public class CreateUserView {
+public final class CreateUserView extends JFrame{
+    private final CreateUserController createUserController;
 
-    JFrame frame;
-
-    public CreateUserView() {
-        this.frame = new JFrame("Create User View");
+    public CreateUserView(CreateUserController createUserController) {
+        this.createUserController = createUserController;
+        createComponents();
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
-    public void createdUI() {
+    public void createComponents() {
         JPanel panel = new JPanel(new GridLayout(5, 1));
         panel.setSize(500, 100);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(500, 300);
         JButton checkPassWordButton = new JButton("Check Password Strength");
         JLabel userNameLabel = new JLabel("Username:");
         JTextField userNameField = new JTextField(15);
@@ -68,11 +65,10 @@ public class CreateUserView {
         buttonPanel.setSize(500,100);
         buttonPanel.add(checkPassWordButton);
         
-        frame.setContentPane(new JPanel(new BorderLayout()));
-        frame.getContentPane().add(panel, BorderLayout.NORTH);
-        frame.getContentPane().add(strengthPanel, BorderLayout.CENTER);
-        frame.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
-        frame.setVisible(true);
+        setContentPane(new JPanel(new BorderLayout()));
+        getContentPane().add(panel, BorderLayout.NORTH);
+        getContentPane().add(strengthPanel, BorderLayout.CENTER);
+        getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     }
 
     public boolean checkPasswordStrength(String passWord) {
@@ -104,3 +100,4 @@ public class CreateUserView {
         }
     }
 }
+
