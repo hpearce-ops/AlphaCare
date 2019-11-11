@@ -64,10 +64,13 @@ public class PatientView extends AbstractView {
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
         medList.addListSelectionListener(patient);
-        frame.getContentPane().add(enter, BorderLayout.NORTH); 
-        frame.getContentPane().add(datePicker, BorderLayout.LINE_START);
-        frame.getContentPane().add(medList, BorderLayout.LINE_END);
-        frame.getContentPane().add(timeField, BorderLayout.SOUTH); 
+        interactionPanel.add(medList); 
+        interactionPanel.add(datePicker); 
+        interactionPanel.add(timeField); 
+        buttonPanel.add(enter); 
+        frame.getContentPane().add(interactionPanel, BorderLayout.NORTH); 
+        frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
+
     }
 
     private class AppointmentListener implements ActionListener {
