@@ -22,7 +22,7 @@ import org.jdatepicker.impl.UtilDateModel;
 public class AbstractView {
     JFrame frame;
     PatientArray patients;
-    DoctorArray doctors; 
+    DoctorArray doctors;
     JList patientList;
     JList doctorList; 
     UtilDateModel model;

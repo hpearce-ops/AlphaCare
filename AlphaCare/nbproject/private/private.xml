@@ -3,26 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/AppointmentManage.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/PatientController.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AdminView.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/PatientArray.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Admin.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Medical/MedicalPersonnel.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Medical/Login.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Appointment.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/MedicalViewDashboard.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/AccountPrivacy.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/MedicalView.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/MedicalPrivacy.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/MedicalController.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/AdminController.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/PatientView.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/testharness/testharness.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/PatientViewDashboard.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/MedicalRecord.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Login.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AdminViewDashboard.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/Login.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/CreateUserController.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/DoctorArray.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Main/AlphaCare.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/Patient.java</file>
         </group>
     </open-files>
 </project-private>

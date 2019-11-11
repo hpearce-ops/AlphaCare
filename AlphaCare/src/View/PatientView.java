@@ -37,8 +37,8 @@ public class PatientView extends AbstractView {
 
     public PatientView() {
         this.frame = new JFrame("Patient View");
-        this.medicalPersonell = new DoctorArray();
-        this.medList = new JList<>(medicalPersonell.getArrayDocs());
+        this.doctors = new DoctorArray();
+        this.doctorList = new JList<>(doctors.getArrayDocs());
         this.model = new UtilDateModel();
         this.timeField = new JTextField();
         this.enter = new JButton("Enter"); 
@@ -54,7 +54,6 @@ public class PatientView extends AbstractView {
     public void userSpecificUI() {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JPanel interactionPanel = new JPanel(new GridLayout(0,2)); 
-        JPanel appointmentPanel = new JPanel(new FlowLayout(FlowLayout.CENTER)); 
         model.setDate(2019, 11, 3);
         model.setSelected(true);
         timeField.setText("ENTER TIME HERE");
@@ -63,8 +62,8 @@ public class PatientView extends AbstractView {
         ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
-        medList.addListSelectionListener(patient);
-        interactionPanel.add(medList); 
+        doctorList.addListSelectionListener(patient);
+        interactionPanel.add(doctorList); 
         interactionPanel.add(datePicker); 
         interactionPanel.add(timeField); 
         buttonPanel.add(enter); 
@@ -77,7 +76,7 @@ public class PatientView extends AbstractView {
         @Override
         public void actionPerformed(ActionEvent e) {
            Date selectedDate = (Date) datePicker.getModel().getValue();
-           String selectedName = (String) medList.getSelectedValue();
+           String selectedName = (String) doctorList.getSelectedValue();
            String selectedTime = (String) timeField.getText(); 
            MedicalPersonnel DrCarder = new MedicalPersonnel("Jane Doe", "12345678");
            Patient patient = new Patient(selectedName, "12345678", "password1"); 
@@ -97,7 +96,7 @@ public class PatientView extends AbstractView {
     private class PatientListener implements ListSelectionListener {
         @Override
         public void valueChanged(ListSelectionEvent e) {
-            String selectedName = (String) medList.getSelectedValue();
+            String selectedName = (String) doctorList.getSelectedValue();
             System.out.println(selectedName);
         }
     }    
