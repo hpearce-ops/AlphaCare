@@ -8,6 +8,7 @@ package Main;
 
 import Controller.*; 
 
+
 /**
  *
  * @author henrypearce
@@ -21,6 +22,8 @@ public class AlphaCare {
 //        selectUserAPI(1);       
 //        selectUserAPI(2);
 //        selectUserAPI(3); 
+        PatientController newPat = new PatientController();
+        AdminController newAdd = new AdminController();
     }
     
     /**
