@@ -5,45 +5,41 @@
  */
 package Main;
 
-
-import Controller.*; 
-
+import Controller.*;
 
 /**
  *
  * @author henrypearce
  */
 public class AlphaCare {
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {  
-          LoginController login = new LoginController();
+    public static void main(String[] args) {
+        LoginController login = new LoginController();
 //        selectUserAPI(1);       
 //        selectUserAPI(2);
 //        selectUserAPI(3); 
-        PatientController newPat = new PatientController();
-        AdminController newAdd = new AdminController();
+//        PatientController newPat = new PatientController();
+//        AdminController newAdd = new AdminController();
     }
-    
+
     /**
-     * Based on an integer value, the method will call the login method for the desired API.
-     * 1 = Administrator
-     * 2 = Medical Personnel
-     * 3 = Patient
+     * Based on an integer value, the method will call the login method for the
+     * desired API. 1 = Administrator 2 = Medical Personnel 3 = Patient
+     *
      * @param selection
      */
     public static void selectUserAPI(int selection) {
         if (selection == 1) {
-            AdminController admin = new AdminController();  
-        }
-        else if (selection == 2) {
-            MedicalController medical = new MedicalController(); 
-        }
-        else if (selection == 3) {
+            AdminController admin = new AdminController();
+        } else if (selection == 2) {
+            MedicalController medical = new MedicalController();
+        } else if (selection == 3) {
             PatientController patient = new PatientController();
         }
         //if statements and other login method calls (methods can be found in respective packages). 
     }
-    
+
 }
