@@ -75,7 +75,7 @@ public class CreateUserView {
         frame.setVisible(true);
     }
 
-    public boolean checkPasswordStrength(String passWord) {
+    private boolean checkPasswordStrength(String passWord) {
         int len = passWord.length();
         int digit = 0;
         int lowerCase = 0;

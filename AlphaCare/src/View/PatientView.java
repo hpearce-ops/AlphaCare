@@ -32,6 +32,9 @@ import javax.swing.event.ListSelectionListener;
  */
 public class PatientView extends AbstractView {
 
+    private final DoctorArray medicalPersonell;
+    private final JList<String> medList;
+
     public PatientView() {
         this.frame = new JFrame("Patient View");
         this.medicalPersonell = new DoctorArray();

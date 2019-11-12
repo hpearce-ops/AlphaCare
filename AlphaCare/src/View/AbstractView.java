@@ -6,7 +6,6 @@
 package View;
 
 import Data.PatientArray;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JList;
