@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import static Controller.LoginController.loginView;
 import View.CreateUserView;
 
 /**
@@ -12,9 +13,11 @@ import View.CreateUserView;
  * @author david
  */
 public class CreateUserController {
+    public static CreateUserView createUserView;
 
     public CreateUserController() {
-        CreateUserView view = new CreateUserView();
-        view.createdUI();
+        createUserView = new CreateUserView(this);
+        createUserView.setVisible(true);
+        loginView.setVisible(false);
     }
 }

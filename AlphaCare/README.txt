@@ -8,3 +8,18 @@ The Composite is are the directories (that are created by the other classes, thi
 The Client are the controllers in the Controller package.
 
 The Password Strength checker is found in the CreateUserView in the View package
+
+
+CREDENTIALS FOR LOGIN
+
+Patient: 
+ID = patient
+Password = patient
+
+Medical Personnel:
+ID = medical
+Password = medical
+
+Admin:
+ID = admin
+Password = admin

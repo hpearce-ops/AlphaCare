@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * @author ajkow
  */
 public class DoctorArray {
-
     ArrayList<MedicalPersonnel> medicalList;
 
     public DoctorArray() {
@@ -38,5 +37,15 @@ public class DoctorArray {
 
     public ArrayList getDocList() {
         return medicalList;
+    }
+    
+    public MedicalPersonnel findDoc(String docName) {
+        MedicalPersonnel temp = null; 
+        for (int i = 0; i < medicalList.size(); i++) {
+            if (docName.equals(medicalList.get(i).getPersonnelID())) {
+                temp = medicalList.get(i); 
+            }
+        }
+        return temp; 
     }
 }

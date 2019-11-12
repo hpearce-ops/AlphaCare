@@ -5,6 +5,8 @@
  */
 package View;
 
+import Data.AppointmentArray;
+import Data.DoctorArray;
 import Data.PatientArray;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,13 +23,16 @@ import org.jdatepicker.impl.UtilDateModel;
 public class AbstractView {
     JFrame frame;
     PatientArray patients;
+    DoctorArray doctors;
+    AppointmentArray appointments;
+    JList appointmentList;
     JList patientList;
-    JList appointmentList; 
+    JList doctorList; 
     UtilDateModel model;
     JDatePanelImpl datePanel;
     JDatePickerImpl datePicker;
     JTextField timeField; 
-    JButton enter; 
+    JButton enter;
     
     public AbstractView() {
         //leave initialization to specified classes

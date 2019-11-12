@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/View/PatientView.java</file>
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/View/AdminViewDashboard.java</file>
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/View/AdminView.java</file>
@@ -13,6 +14,16 @@
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/View/MedicalView.java</file>
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/Controller/AdminController.java</file>
             <file>file:/C:/Users/david/Desktop/IST412/AlphaCare/AlphaCare/src/Controller/MedicalController.java</file>
+=======
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AdminView.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/PatientArray.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Admin.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/MedicalController.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/CreateUserController.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/DoctorArray.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Main/AlphaCare.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/Patient.java</file>
+>>>>>>> 704a49603dd75eb1e5e1f72dba177763156aa172
         </group>
     </open-files>
 </project-private>
