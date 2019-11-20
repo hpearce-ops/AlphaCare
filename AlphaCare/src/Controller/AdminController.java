@@ -15,7 +15,7 @@ import java.time.LocalDate;
 public class AdminController {
     
     public AdminController() {
-        AdminView view = new AdminView();
+        AdminView view = new AdminView(this);
         view.createdUI();
     
         Admin admin = new Admin("Admin", "Admin");
