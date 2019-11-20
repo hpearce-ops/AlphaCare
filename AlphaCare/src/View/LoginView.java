@@ -30,8 +30,8 @@ public final class LoginView extends JFrame {
     private final JTextField password = new JTextField(50);
 
     private final JLabel NAVIGATION1 = new JLabel("Use Case Navigation: ");
-    private final JLabel NAVIGATION2 = new JLabel("Please log in with the username and password as 'admin'.");
-    private final JLabel NAVIGATION3 = new JLabel("This use case will demonstrate how administrators can create and delete appointments.");
+    private final JLabel NAVIGATION2 = new JLabel("Please log in with the username and password as 'medical'.");
+    private final JLabel NAVIGATION3 = new JLabel("This use case will demonstrate how medical personnel can view patient medical records.");
 
     public LoginView(LoginController loginController) {
         this.loginController = loginController;
@@ -42,7 +42,7 @@ public final class LoginView extends JFrame {
 
     public void loginComponents() {
         setTitle("Alpha Care");
-        setSize(800, 500);
+        setSize(700, 500);
         setLocationRelativeTo(null);
         setContentPane(new JPanel(new BorderLayout()));
         //Create LoginPanel with entry fields
