@@ -5,6 +5,7 @@
  */
 package View;
 
+import Controller.AdminController;
 import Data.AppointmentArray;
 import Data.DoctorArray;
 import java.awt.BorderLayout;
@@ -28,6 +29,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
 /**
@@ -37,8 +39,9 @@ import javax.swing.JTextField;
 public class AdminView extends AbstractView {
 
     JButton delete;
+    private final AdminController adminCntl;
 
-    public AdminView() {
+    public AdminView(AdminController adminCntl) {
         this.frame = new JFrame("Admin View");
         this.NAVIGATION = new JLabel("Use Case Navigation: Please select a patient, doctor, date, and enter a time. Then press enter!");
         this.patients = new PatientArray();
@@ -57,6 +60,8 @@ public class AdminView extends AbstractView {
         p.put("text.year", "Year");
         this.datePanel = new JDatePanelImpl(model, p);
         this.datePicker = new JDatePickerImpl(datePanel, new DateLabelFormatter());
+        
+        this.adminCntl = adminCntl;
     }
 
     @Override
@@ -80,9 +85,29 @@ public class AdminView extends AbstractView {
         buttonPanel.add(NAVIGATION);
         appointmentPanel.add(appointmentList);
         appointmentPanel.add(delete);
-        frame.getContentPane().add(interactionPanel, BorderLayout.NORTH);
-        frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
-        frame.getContentPane().add(appointmentPanel, BorderLayout.SOUTH);
+        
+        //make navigation tabs
+        JTabbedPane navPane = new JTabbedPane();
+        
+        JPanel doctorTab = new JPanel(); //doctor panel
+        JLabel label1 = new JLabel();
+        doctorTab.add(label1);
+        
+        JPanel apptTab = new JPanel(); //appointment panel
+        apptTab.add(interactionPanel, BorderLayout.NORTH);
+        apptTab.add(buttonPanel, BorderLayout.CENTER);
+        apptTab.add(appointmentPanel, BorderLayout.SOUTH);
+        
+        JPanel settingsTab = new JPanel(); //settings panel
+        JLabel label3 = new JLabel();
+        label3.setText("Medical Record Area"); 
+        settingsTab.add(label3);
+        
+        navPane.addTab("Staff", doctorTab);
+        navPane.addTab("Appointments", apptTab);
+        navPane.addTab("Settings", settingsTab);
+        
+        frame.getContentPane().add(navPane);       
     }
 
     private class AppointmentListener implements ActionListener {
