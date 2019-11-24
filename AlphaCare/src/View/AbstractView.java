@@ -8,6 +8,7 @@ package View;
 import Data.AppointmentArray;
 import Data.DoctorArray;
 import Data.PatientArray;
+import Data.RecordArray;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,6 +28,7 @@ public class AbstractView {
     PatientArray patients;
     DoctorArray doctors;
     AppointmentArray appointments;
+    RecordArray recordList; 
     JList patientList;
     JList doctorList;
     JList appointmentList;

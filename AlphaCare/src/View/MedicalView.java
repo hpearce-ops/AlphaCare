@@ -7,10 +7,16 @@ package View;
 
 import Controller.MedicalController;
 import Data.PatientArray;
-import Model.Patients.Patient;
+import Data.RecordArray;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -24,15 +30,16 @@ import javax.swing.JTabbedPane;
  */
 public class MedicalView extends AbstractView{
 
-    private final MedicalController medCntl;
+//    private final MedicalController medCntl;
     private JButton viewRecord;
     
-    public MedicalView(MedicalController medCntl) {
+    public MedicalView() {
         this.frame = new JFrame("Medical View");
         this.patients = new PatientArray();
         this.patientList = new JList<>(patients.getArrayNames());
+        this.recordList = new RecordArray();
 
-        this.medCntl = medCntl;
+//        this.medCntl = medCntl;
 
     }
     
@@ -78,6 +85,13 @@ public class MedicalView extends AbstractView{
         public void actionPerformed(ActionEvent e) {
             if(e.getSource() == viewRecord){
                 Object selection = patientList.getSelectedValue();
+                File file = recordList.findRecord((String) selection);
+                System.out.println(file.getName()); 
+                try {
+                    BufferedImage img = ImageIO.read(file);
+                } catch (IOException ex) {
+                    Logger.getLogger(MedicalView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         }
         
