@@ -7,7 +7,6 @@ package Data;
 
 import Model.Patients.MedicalRecord;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -28,9 +27,9 @@ public class RecordArray {
     private void populateArray() {
         for (int i = 0; i < patient.getPatientList().size(); i++) {
             recordList.add(new MedicalRecord(patient.getPatientList().get(i).getPatientID(), patient.getPatientList().get(i).getPatientName()));
-            File file = new File("./MedicalRecords/download.png");
+            File file = new File("./MedicalRecords/" + patient.patientList.get(i).getPatientID() + ".png");
             recordList.get(i).uploadMedicalRecord(file);
-            System.out.println(recordList.get(i).getMedicalRecords().getAbsolutePath());
+//            System.out.println(recordList.get(i).getMedicalRecords().getAbsolutePath());
         }
     }
 
