@@ -29,7 +29,6 @@ public class RecordArray {
             recordList.add(new MedicalRecord(patient.getPatientList().get(i).getPatientID(), patient.getPatientList().get(i).getPatientName()));
             File file = new File("./MedicalRecords/" + patient.patientList.get(i).getPatientID() + ".png");
             recordList.get(i).uploadMedicalRecord(file);
-//            System.out.println(recordList.get(i).getMedicalRecords().getAbsolutePath());
         }
     }
 
