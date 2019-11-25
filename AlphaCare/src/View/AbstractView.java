@@ -38,6 +38,7 @@ public class AbstractView {
     protected JTextField timeField;
     protected JButton enter;
     protected JLabel NAVIGATION;
+    protected JLabel image;
 
     public AbstractView() {
         //leave initialization to specified classes
