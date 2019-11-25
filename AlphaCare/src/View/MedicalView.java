@@ -31,7 +31,6 @@ import javax.swing.JTabbedPane;
  */
 public class MedicalView extends AbstractView{
 
-//    private final MedicalController medCntl;
     private JButton viewRecord;
     
     public MedicalView() {
@@ -41,14 +40,10 @@ public class MedicalView extends AbstractView{
         this.recordList = new RecordArray();
         this.image = new JLabel(); 
 
-//        this.medCntl = medCntl;
-
     }
     
     @Override
     public void userSpecificUI() {
-//        frame.getContentPane().add(patientList, BorderLayout.LINE_END);
-       
         //make navigation tabs
         JTabbedPane navPane = new JTabbedPane();
         frame.getContentPane().add(navPane);
@@ -89,7 +84,6 @@ public class MedicalView extends AbstractView{
             if(e.getSource() == viewRecord){
                 Object selection = patientList.getSelectedValue();
                 File file = recordList.findRecord((String) selection);
-                System.out.println(file.getName()); 
                 try {
                     BufferedImage img = ImageIO.read(file);
                     ImageIcon icon = new ImageIcon(img); 
