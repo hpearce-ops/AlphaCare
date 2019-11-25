@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -38,6 +39,7 @@ public class MedicalView extends AbstractView{
         this.patients = new PatientArray();
         this.patientList = new JList<>(patients.getArrayNames());
         this.recordList = new RecordArray();
+        this.image = new JLabel(); 
 
 //        this.medCntl = medCntl;
 
@@ -72,6 +74,7 @@ public class MedicalView extends AbstractView{
         patientSelectPanel.add(viewRecord);
 
         medicalRecordTab.add(patientSelectPanel, BorderLayout.NORTH);
+        medicalRecordTab.add(image, BorderLayout.SOUTH); 
             
         //END OF TAB CODE
         navPane.addTab("Your Patients", patientListTab);
@@ -89,6 +92,9 @@ public class MedicalView extends AbstractView{
                 System.out.println(file.getName()); 
                 try {
                     BufferedImage img = ImageIO.read(file);
+                    ImageIcon icon = new ImageIcon(img); 
+                    image.setSize(500, 500);
+                    image.setIcon(icon);
                 } catch (IOException ex) {
                     Logger.getLogger(MedicalView.class.getName()).log(Level.SEVERE, null, ex);
                 }

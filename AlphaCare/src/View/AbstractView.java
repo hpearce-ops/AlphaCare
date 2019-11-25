@@ -37,6 +37,7 @@ public class AbstractView {
     JDatePickerImpl datePicker;
     JTextField timeField;
     JButton enter;
+    JLabel image; 
     JLabel NAVIGATION;
 
     public AbstractView() {
