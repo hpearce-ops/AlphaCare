@@ -72,6 +72,7 @@ public class MedicalView extends AbstractView{
         medicalRecordTab.add(patientSelectPanel, BorderLayout.NORTH);
 
         medicalRecordTab.add(image, BorderLayout.SOUTH); 
+        medicalRecordTab.add(useCase2Label);
             
         //END OF TAB CODE
         navPane.addTab("Your Patients", patientListTab);
