@@ -7,7 +7,6 @@ package Data;
 
 import Model.Patients.MedicalRecord;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -16,8 +15,8 @@ import java.util.ArrayList;
  */
 public class RecordArray {
 
-    ArrayList<MedicalRecord> recordList;
-    PatientArray patient;
+    private final ArrayList<MedicalRecord> recordList;
+    private final PatientArray patient;
 
     public RecordArray() {
         this.recordList = new ArrayList<>();

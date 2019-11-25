@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author ajkow
  */
 public class AdminArray {
-    ArrayList<Admin> adminList;
+    private final ArrayList<Admin> adminList;
     public AdminArray(){
         this.adminList = new ArrayList<>();
         populateArray();

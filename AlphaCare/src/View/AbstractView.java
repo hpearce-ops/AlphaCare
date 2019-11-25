@@ -24,20 +24,20 @@ import org.jdatepicker.impl.UtilDateModel;
  */
 public class AbstractView {
 
-    JFrame frame;
-    PatientArray patients;
-    DoctorArray doctors;
-    AppointmentArray appointments;
-    RecordArray recordList; 
-    JList patientList;
-    JList doctorList;
-    JList appointmentList;
-    UtilDateModel model;
-    JDatePanelImpl datePanel;
-    JDatePickerImpl datePicker;
-    JTextField timeField;
-    JButton enter;
-    JLabel NAVIGATION;
+    protected JFrame frame;
+    protected PatientArray patients;
+    protected DoctorArray doctors;
+    protected AppointmentArray appointments;
+    protected RecordArray recordList; 
+    protected JList patientList;
+    protected JList doctorList;
+    protected JList appointmentList;
+    protected UtilDateModel model;
+    protected JDatePanelImpl datePanel;
+    protected JDatePickerImpl datePicker;
+    protected JTextField timeField;
+    protected JButton enter;
+    protected JLabel NAVIGATION;
 
     public AbstractView() {
         //leave initialization to specified classes

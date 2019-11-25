@@ -72,7 +72,7 @@ public final class CreateUserView extends JFrame {
         getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     }
 
-    public boolean checkPasswordStrength(String passWord) {
+    private boolean checkPasswordStrength(String passWord) {
         int len = passWord.length();
         int digit = 0;
         int lowerCase = 0;
@@ -94,10 +94,6 @@ public final class CreateUserView extends JFrame {
                 count = count + 1;
             }
         }
-        if (digit >= 1 && lowerCase >= 1 && upperCase >= 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return digit >= 1 && lowerCase >= 1 && upperCase >= 1;
     }
 }

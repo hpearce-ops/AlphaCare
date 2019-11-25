@@ -5,7 +5,6 @@
  */
 package View;
 
-import Controller.MedicalController;
 import Data.PatientArray;
 import Data.RecordArray;
 import java.awt.BorderLayout;
@@ -30,7 +29,6 @@ import javax.swing.JTabbedPane;
  */
 public class MedicalView extends AbstractView{
 
-//    private final MedicalController medCntl;
     private JButton viewRecord;
     
     public MedicalView() {
@@ -39,14 +37,11 @@ public class MedicalView extends AbstractView{
         this.patientList = new JList<>(patients.getArrayNames());
         this.recordList = new RecordArray();
 
-//        this.medCntl = medCntl;
-
     }
     
     @Override
     public void userSpecificUI() {
-//        frame.getContentPane().add(patientList, BorderLayout.LINE_END);
-       
+
         //make navigation tabs
         JTabbedPane navPane = new JTabbedPane();
         frame.getContentPane().add(navPane);
@@ -54,7 +49,8 @@ public class MedicalView extends AbstractView{
         
         //PATIENT TAB
         JPanel patientListTab = new JPanel();
-        patientListTab.add(patientList);
+        JLabel useCaseLabel = new JLabel("For use case 2, navigate to the medical record tab");
+        patientListTab.add(useCaseLabel,patientList);
         
         //APPOINTMENT TAB
         JPanel patientApptTab = new JPanel();
@@ -64,7 +60,7 @@ public class MedicalView extends AbstractView{
         
         //MEDICAL RECORD TAB
         JPanel medicalRecordTab = new JPanel();
-       
+        JLabel useCase2Label = new JLabel("Select a patient and click view medical record button.");
         JPanel patientSelectPanel = new JPanel();
         patientSelectPanel.add(patientList);
         viewRecord = new JButton("View Record");
@@ -72,6 +68,7 @@ public class MedicalView extends AbstractView{
         patientSelectPanel.add(viewRecord);
 
         medicalRecordTab.add(patientSelectPanel, BorderLayout.NORTH);
+        medicalRecordTab.add(useCase2Label);
             
         //END OF TAB CODE
         navPane.addTab("Your Patients", patientListTab);

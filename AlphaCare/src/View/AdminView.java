@@ -38,7 +38,7 @@ import javax.swing.JTextField;
  */
 public class AdminView extends AbstractView {
 
-    JButton delete;
+    private JButton delete;
     private final AdminController adminCntl;
 
     public AdminView(AdminController adminCntl) {

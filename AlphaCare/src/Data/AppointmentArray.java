@@ -15,9 +15,9 @@ import java.util.Date;
  */
 public class AppointmentArray {
 
-    ArrayList<Appointment> aptList;
-    PatientArray patient;
-    DoctorArray doctor;
+    private final ArrayList<Appointment> aptList;
+    private final PatientArray patient;
+    private final DoctorArray doctor;
 
     public AppointmentArray() {
         this.aptList = new ArrayList<>();
