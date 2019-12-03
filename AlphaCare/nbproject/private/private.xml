@@ -3,14 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/AppointmentManage.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AdminView.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/PatientArray.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/MedicalPrivacy.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Admin.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/MedicalController.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Controller/CreateUserController.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Data/DoctorArray.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Admin/Appointment.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/PatientView.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/MedicalViewDashboard.java</file>
             <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Main/AlphaCare.java</file>
-            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/Model/Patients/Patient.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AbstractView.java</file>
+            <file>file:/C:/Users/ajkow/Documents/NetBeansProjects/AlphaCare/AlphaCare/src/View/AppointmentView.java</file>
         </group>
     </open-files>
 </project-private>

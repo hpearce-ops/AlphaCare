@@ -54,6 +54,7 @@ public class PatientView extends AbstractView {
     public void userSpecificUI() {
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         JPanel interactionPanel = new JPanel(new GridLayout(0,2)); 
+        JPanel appointmentPanel = new JPanel(new GridLayout(0,3));
         model.setDate(2019, 11, 3);
         model.setSelected(true);
         timeField.setText("ENTER TIME HERE");
