@@ -17,7 +17,6 @@ import org.jdatepicker.impl.JDatePanelImpl;
 import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 
-import Data.DoctorArray;
 import Data.PatientApptArray;
 import Model.Admin.Appointment; 
 import Model.Medical.MedicalPersonnel; 
@@ -38,14 +37,14 @@ import javax.swing.event.ListSelectionListener;
  */
 public class PatientView extends AbstractView {
 
-
     public PatientView() {
         this.frame = new JFrame("Patient View");
         this.patientAppts = new PatientApptArray(); 
-        this.appointmentList = new JList<>(patientAppts.getAptNames()); 
+        this.appointmentList = new JList<>(patientAppts.appointmentStatusSort()); 
         this.model = new UtilDateModel();
         this.timeField = new JTextField();
-        this.enter = new JButton("Enter"); 
+        this.enter = new JButton("Confirm"); 
+        this.exit = new JButton("Cancel"); 
         Properties p = new Properties();
         p.put("text.today", "Today");
         p.put("text.month", "Month");
@@ -60,17 +59,21 @@ public class PatientView extends AbstractView {
         JPanel interactionPanel = new JPanel(new GridLayout(0,2)); 
         model.setDate(2019, 11, 3);
         model.setSelected(true);
-        timeField.setText("ENTER TIME HERE");
+        JLabel waitingLabel = new JLabel("Waiting for Approval"); 
+//        timeField.setText("Waiting for Approval");
         ActionListener appointment = new AppointmentListener(); 
         ActionListener calendar = new CalendarListener();
         ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
 //        doctorList.addListSelectionListener(patient);
-        interactionPanel.add(appointmentList); 
+        interactionPanel.add(waitingLabel); 
+        interactionPanel.add(appointmentList);
+        interactionPanel.add(enter);
+        interactionPanel.add(exit); 
 //        interactionPanel.add(datePicker); 
 //        interactionPanel.add(timeField); 
-        buttonPanel.add(enter); 
+//        buttonPanel.add(enter); 
         frame.getContentPane().add(interactionPanel, BorderLayout.NORTH); 
         frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
         
