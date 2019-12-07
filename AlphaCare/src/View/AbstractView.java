@@ -8,8 +8,10 @@ package View;
 import Data.AppointmentArray;
 import Data.DoctorArray;
 import Data.PatientArray;
+import Data.RecordArray;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JTextField;
 import org.jdatepicker.impl.JDatePanelImpl;
@@ -21,32 +23,36 @@ import org.jdatepicker.impl.UtilDateModel;
  * @author henrypearce
  */
 public class AbstractView {
-    JFrame frame;
-    PatientArray patients;
-    DoctorArray doctors;
-    AppointmentArray appointments;
-    JList appointmentList;
-    JList patientList;
-    JList doctorList; 
-    UtilDateModel model;
-    JDatePanelImpl datePanel;
-    JDatePickerImpl datePicker;
-    JTextField timeField; 
-    JButton enter;
-    
+
+    protected JFrame frame;
+    protected PatientArray patients;
+    protected DoctorArray doctors;
+    protected AppointmentArray appointments;
+    protected RecordArray recordList; 
+    protected JList patientList;
+    protected JList doctorList;
+    protected JList appointmentList;
+    protected UtilDateModel model;
+    protected JDatePanelImpl datePanel;
+    protected JDatePickerImpl datePicker;
+    protected JTextField timeField;
+    protected JButton enter;
+    protected JLabel NAVIGATION;
+    protected JLabel image;
+
     public AbstractView() {
         //leave initialization to specified classes
     }
-    
+
     public void createdUI() {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500, 500);
-        userSpecificUI(); 
+        frame.setSize(700, 500);
+        userSpecificUI();
         frame.setVisible(true);
-    } 
+    }
 
     public void userSpecificUI() {
         //actions specific to patient, administrator, and medical can be placed here. 
     }
-    
+
 }

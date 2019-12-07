@@ -22,7 +22,6 @@ public class DateLabelFormatter extends AbstractFormatter {
     @Override
     public Object stringToValue(String text) throws ParseException {
         return dateFormatter.parseObject(text);
-//              throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -33,7 +32,6 @@ public class DateLabelFormatter extends AbstractFormatter {
 	} else {
             return "";
         }
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

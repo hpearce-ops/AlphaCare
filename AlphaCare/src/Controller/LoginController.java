@@ -12,7 +12,7 @@ import View.LoginView;
  * @author mtd52
  */
 public class LoginController {
-        public static LoginView loginView;
+    protected static LoginView loginView;
 
         
     public LoginController(){

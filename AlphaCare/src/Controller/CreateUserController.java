@@ -13,7 +13,7 @@ import View.CreateUserView;
  * @author david
  */
 public class CreateUserController {
-    public static CreateUserView createUserView;
+    protected static CreateUserView createUserView;
 
     public CreateUserController() {
         createUserView = new CreateUserView(this);

@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author ajkow
  */
 public class DoctorArray {
-    ArrayList<MedicalPersonnel> medicalList;
+    private final ArrayList<MedicalPersonnel> medicalList;
 
     public DoctorArray() {
         this.medicalList = new ArrayList<>();

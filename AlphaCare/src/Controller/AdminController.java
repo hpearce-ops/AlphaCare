@@ -11,12 +11,11 @@ import Model.Patients.Patient;
 
 import java.sql.Date;
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 public class AdminController {
     
     public AdminController() {
-        AdminView view = new AdminView();
+        AdminView view = new AdminView(this);
         view.createdUI();
     
         Admin admin = new Admin("Admin", "Admin");

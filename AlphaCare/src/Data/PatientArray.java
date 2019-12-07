@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class PatientArray {
 
-    ArrayList<Patient> patientList;
+    protected ArrayList<Patient> patientList;
 
     public PatientArray() {
         this.patientList = new ArrayList<>();

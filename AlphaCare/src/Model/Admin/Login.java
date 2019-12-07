@@ -5,7 +5,6 @@
  */
 package Model.Admin;
 
-import Model.Admin.Admin;
 import Login.LoginInterface;
 
 /**

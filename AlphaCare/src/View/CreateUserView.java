@@ -15,7 +15,8 @@ import javax.swing.JPanel;
  *
  * @author david
  */
-public final class CreateUserView extends JFrame{
+public final class CreateUserView extends JFrame {
+
     private final CreateUserController createUserController;
 
     public CreateUserView(CreateUserController createUserController) {
@@ -42,36 +43,36 @@ public final class CreateUserView extends JFrame{
         panel.add(confirmPassWordField);
         panel.add(new JLabel("Password must contain at least one digit, one uppercase letter, one lower case letter, and be 7 or more "
                 + "characters long"));
-        
+
         JPanel strengthPanel = new JPanel();
         strengthPanel.setSize(500, 100);
-        
+
         checkPassWordButton.addActionListener(e -> {
             strengthPanel.removeAll();
             strengthPanel.setOpaque(false);
-            if(checkPasswordStrength(confirmPassWordField.getText()) && confirmPassWordField.getText().equals(passWordField.getText())){
+            if (checkPasswordStrength(confirmPassWordField.getText()) && confirmPassWordField.getText().equals(passWordField.getText())) {
                 strengthPanel.setOpaque(true);
                 strengthPanel.setBackground(Color.green);
-            }else if(checkPasswordStrength(confirmPassWordField.getText()) && !confirmPassWordField.getText().equals(passWordField.getText())){
+            } else if (checkPasswordStrength(confirmPassWordField.getText()) && !confirmPassWordField.getText().equals(passWordField.getText())) {
                 strengthPanel.add(new JLabel("Password fields do not match"));
                 strengthPanel.updateUI();
-            }else{
+            } else {
                 strengthPanel.setOpaque(true);
                 strengthPanel.setBackground(Color.red);
             }
         });
-        
+
         JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        buttonPanel.setSize(500,100);
+        buttonPanel.setSize(500, 100);
         buttonPanel.add(checkPassWordButton);
-        
+
         setContentPane(new JPanel(new BorderLayout()));
         getContentPane().add(panel, BorderLayout.NORTH);
         getContentPane().add(strengthPanel, BorderLayout.CENTER);
         getContentPane().add(buttonPanel, BorderLayout.SOUTH);
     }
 
-    public boolean checkPasswordStrength(String passWord) {
+    private boolean checkPasswordStrength(String passWord) {
         int len = passWord.length();
         int digit = 0;
         int lowerCase = 0;
@@ -93,11 +94,6 @@ public final class CreateUserView extends JFrame{
                 count = count + 1;
             }
         }
-        if (digit >= 1 && lowerCase >= 1 && upperCase >= 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return digit >= 1 && lowerCase >= 1 && upperCase >= 1;
     }
 }
-
