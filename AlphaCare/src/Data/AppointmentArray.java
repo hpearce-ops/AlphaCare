@@ -18,6 +18,9 @@ public class AppointmentArray {
     final ArrayList<Appointment> aptList;
     final PatientArray patient;
     final DoctorArray doctor;
+    
+    private String[] trueList;
+    private String[] falseList; 
 
     public AppointmentArray() {
         this.aptList = new ArrayList<>();
@@ -72,4 +75,32 @@ public class AppointmentArray {
             }
         }
     }
+    
+    public String[] appointmentStatusSort() {
+        ArrayList<String> appointmentList = new ArrayList<>();
+        ArrayList<String> tList = new ArrayList<>(); 
+        ArrayList<String> fList = new ArrayList<>(); 
+        for (int i = 0; i < aptList.size(); i++) {
+            if (aptList.get(i).getStatus() == null) {
+                appointmentList.add(aptList.get(i).getAppointment()); 
+            } else if (!aptList.get(i).getStatus()) {
+                fList.add(aptList.get(i).getAppointment()); 
+            } else {
+                tList.add(aptList.get(i).getAppointment()); 
+            }
+        }
+        trueList = tList.toArray(new String[tList.size()]); 
+        falseList = fList.toArray(new String[fList.size()]); 
+        String[] aptArray = appointmentList.toArray(new String[appointmentList.size()]);
+        return aptArray;
+    }
+
+    public String[] getTrueList() {
+        return trueList;
+    }
+
+    public String[] getFalseList() {
+        return falseList;
+    }
+
 }

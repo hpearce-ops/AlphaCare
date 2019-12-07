@@ -24,6 +24,7 @@ public class PatientApptArray extends AppointmentArray {
         aptList.add(new Appointment(patient.findPatient("Robert Redford"), doctor.findDoc("Floyd Collins"), date, "11:00 am"));  
         aptList.add(new Appointment(patient.findPatient("Robert Redford"), doctor.findDoc("Demi Gawd"), date, "12:00 pm"));
         aptList.add(new Appointment(patient.findPatient("Robert Redford"), doctor.findDoc("John Smith"), date, "5:00 pm")); 
+        aptList.get(0).setStatus(Boolean.TRUE);
     }
     
     
