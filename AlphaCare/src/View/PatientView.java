@@ -18,6 +18,7 @@ import org.jdatepicker.impl.JDatePickerImpl;
 import org.jdatepicker.impl.UtilDateModel;
 
 import Data.DoctorArray;
+import Data.PatientApptArray;
 import Model.Admin.Appointment; 
 import Model.Medical.MedicalPersonnel; 
 import Model.Patients.Patient;
@@ -25,7 +26,9 @@ import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -35,13 +38,11 @@ import javax.swing.event.ListSelectionListener;
  */
 public class PatientView extends AbstractView {
 
-    private final DoctorArray doctors;
-    private final JList<String> doctorList;
 
     public PatientView() {
         this.frame = new JFrame("Patient View");
-        this.doctors = new DoctorArray();
-        this.doctorList = new JList<>(doctors.getArrayDocs());
+        this.patientAppts = new PatientApptArray(); 
+        this.appointmentList = new JList<>(patientAppts.getAptNames()); 
         this.model = new UtilDateModel();
         this.timeField = new JTextField();
         this.enter = new JButton("Enter"); 
@@ -66,13 +67,35 @@ public class PatientView extends AbstractView {
         ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
-        doctorList.addListSelectionListener(patient);
-        interactionPanel.add(doctorList); 
-        interactionPanel.add(datePicker); 
-        interactionPanel.add(timeField); 
+//        doctorList.addListSelectionListener(patient);
+        interactionPanel.add(appointmentList); 
+//        interactionPanel.add(datePicker); 
+//        interactionPanel.add(timeField); 
         buttonPanel.add(enter); 
         frame.getContentPane().add(interactionPanel, BorderLayout.NORTH); 
         frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
+        
+        JTabbedPane navPane = new JTabbedPane();
+        
+        JPanel recordTab = new JPanel(); //medical record panel
+        JLabel label1 = new JLabel();
+        recordTab.add(label1);
+        
+        JPanel apptTab = new JPanel(); //appointment panel
+        apptTab.add(interactionPanel, BorderLayout.NORTH);
+        apptTab.add(buttonPanel, BorderLayout.CENTER);
+//        apptTab.add(appointmentPanel, BorderLayout.SOUTH);
+        
+        JPanel settingsTab = new JPanel(); //settings panel
+        JLabel label3 = new JLabel();
+        label3.setText("Security Settings Area"); 
+        settingsTab.add(label3);
+        
+        navPane.addTab("Medical Record", recordTab);
+        navPane.addTab("Appointments", apptTab);
+        navPane.addTab("Settings", settingsTab);
+        
+        frame.getContentPane().add(navPane); 
 
     }
 
