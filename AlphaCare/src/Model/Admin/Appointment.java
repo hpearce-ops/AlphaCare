@@ -18,6 +18,7 @@ public class Appointment {
     private MedicalPersonnel medicalPersonnel;
     private Date date;
     private String time;
+    private Boolean status; 
 
     /**
      *
@@ -105,6 +106,13 @@ public class Appointment {
     public String getAppointment(){
         return patient.getPatientName() + ", " + medicalPersonnel.getPersonnelID() + ", " + getRealDate() + ", " + time; 
     }
-    
-    
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+     
 }
