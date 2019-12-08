@@ -90,7 +90,7 @@ public class AdminView extends AbstractView {
         JTabbedPane navPane = new JTabbedPane();
         
         JPanel doctorTab = new JPanel(); //doctor panel
-        JLabel label1 = new JLabel();
+        JLabel label1 = new JLabel("For use case 1, navigate to the Appointments tab.");
         doctorTab.add(label1);
         
         JPanel apptTab = new JPanel(); //appointment panel
