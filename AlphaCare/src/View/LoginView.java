@@ -37,6 +37,8 @@ public final class LoginView extends JFrame {
     private final JLabel NAVIGATION5 = new JLabel("Please log in with the username and password as 'medical'."); 
     private final JLabel NAVIGATION6 = new JLabel("This use case will demonstrate how medical personnel can view patient medical records."); 
 
+    
+    
     public LoginView(LoginController loginController) {
         this.loginController = loginController;
         loginComponents();
