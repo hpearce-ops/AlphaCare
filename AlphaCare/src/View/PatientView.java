@@ -61,20 +61,20 @@ public class PatientView extends AbstractView {
         model.setDate(2019, 11, 3);
         model.setSelected(true);
         JLabel waitingLabel = new JLabel("Waiting for Approval"); 
-//        timeField.setText("Waiting for Approval");
+        timeField.setText("Waiting for Approval");
         ActionListener appointment = new AppointmentListener(); 
         ActionListener calendar = new CalendarListener();
         ListSelectionListener patient = new PatientListener();
         enter.addActionListener(appointment);
         datePicker.addActionListener(calendar);
-//        doctorList.addListSelectionListener(patient);
+        doctorList.addListSelectionListener(patient);
         interactionPanel.add(waitingLabel); 
         interactionPanel.add(appointmentList);
         interactionPanel.add(enter);
         interactionPanel.add(exit); 
-//        interactionPanel.add(datePicker); 
-//        interactionPanel.add(timeField); 
-//        buttonPanel.add(enter); 
+        interactionPanel.add(datePicker); 
+        interactionPanel.add(timeField); 
+        buttonPanel.add(enter); 
         frame.getContentPane().add(interactionPanel, BorderLayout.NORTH); 
         frame.getContentPane().add(buttonPanel, BorderLayout.CENTER);
         
@@ -87,7 +87,7 @@ public class PatientView extends AbstractView {
         JPanel apptTab = new JPanel(); //appointment panel
         apptTab.add(interactionPanel, BorderLayout.NORTH);
         apptTab.add(buttonPanel, BorderLayout.CENTER);
-//        apptTab.add(appointmentPanel, BorderLayout.SOUTH);
+        apptTab.add(appointmentPanel, BorderLayout.SOUTH);
         
         JPanel settingsTab = new JPanel(); //settings panel
         JLabel label3 = new JLabel();
