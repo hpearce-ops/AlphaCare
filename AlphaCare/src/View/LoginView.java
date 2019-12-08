@@ -37,8 +37,11 @@ public final class LoginView extends JFrame {
     private final JLabel NAVIGATION5 = new JLabel("Please log in with the username and password as 'medical'."); 
     private final JLabel NAVIGATION6 = new JLabel("This use case will demonstrate how medical personnel can view patient medical records."); 
 
-    
-    
+    private final JLabel NAVIGATION7 = new JLabel("For use case 3: Give Medical Access to other people");
+    private final JLabel NAVIGATION8 = new JLabel("Please log in with the username and password as 'patient'");
+    private final JLabel NAVIGATION9 = new JLabel("Type a name into the text field and click the Give Access Button");
+    private final JLabel NAVIGATION10 = new JLabel("Check in the files section of the program and look for the medInfoAccess.txt file");
+    private final JLabel NAVIGATION11 = new JLabel("This use case will demonstrate how patients can add people to view their medical records");    
     public LoginView(LoginController loginController) {
         this.loginController = loginController;
         loginComponents();
@@ -70,7 +73,12 @@ public final class LoginView extends JFrame {
         loginPanel.add(NAVIGATION4);
         loginPanel.add(NAVIGATION5);
         loginPanel.add(NAVIGATION6);
-
+        loginPanel.add(NAVIGATION7);
+        loginPanel.add(NAVIGATION8);
+        loginPanel.add(NAVIGATION9);
+        loginPanel.add(NAVIGATION10);
+        loginPanel.add(NAVIGATION11);
+        
         getContentPane().add(loginPanel);
 
         //buttonPanel created
