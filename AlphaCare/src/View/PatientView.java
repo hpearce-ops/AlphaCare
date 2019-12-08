@@ -8,14 +8,11 @@ package View;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
 import javax.swing.JFrame;
 import javax.swing.JList;
 
 import Data.PatientApptArray;
 import Model.Admin.Appointment;
-import Model.Medical.MedicalPersonnel;
-import Model.Patients.Patient;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import javax.swing.DefaultListModel;
@@ -24,9 +21,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextField;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 /**
  *
