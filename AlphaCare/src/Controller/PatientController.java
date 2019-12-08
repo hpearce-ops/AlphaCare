@@ -47,9 +47,6 @@ public class PatientController {
         accPrivacy.approveAddition(accPrivacy.getAccountID());
         accPrivacy.removedAddition(accPrivacy.getAccountID());
         Appointment appt = new Appointment(patient, null, Date.valueOf(LocalDate.MAX), "12:00 pm"); 
-        AppointmentManage apptManage = new AppointmentManage(appt);
-        apptManage.accept();
-        apptManage.deny(); 
     }
 
     private void failedLogin() {
